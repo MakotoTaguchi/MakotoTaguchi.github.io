@@ -108,6 +108,8 @@
                 // 角度に応じてカメラの位置を設定
                 camera.position.x = 1000 * Math.sin(radian);
                 camera.position.z = 1000 * Math.cos(radian);
+                // 原点方向を見つめる
+                camera.lookAt(new THREE.Vector3(0, 0, 0));
 
                 //メッシュを回転させる
                 earthMesh.rotation.y += 0.005;
