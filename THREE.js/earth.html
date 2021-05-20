@@ -87,6 +87,36 @@
                 mesh.position.z = 400 * Math.cos((index / geometryList.length) * Math.PI * 2);
             });
 
+            // 星屑を作成します (カメラの動きをわかりやすくするため)
+            createStarField();
+
+            /** 星屑を作成します */
+            function createStarField() {
+                // 頂点情報を作詞絵
+                const vertices = [];
+                for (let i = 0; i < 1000; i++) {
+                    const x = 3000 * (Math.random() - 0.5);
+                    const y = 3000 * (Math.random() - 0.5);
+                    const z = 3000 * (Math.random() - 0.5);
+
+                    vertices.push(x, y, z);
+                }
+
+                // 形状データを作成
+                const geometry = new THREE.BufferGeometry();
+                geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+                // マテリアルを作成
+                const material = new THREE.PointsMaterial({
+                    size: 10,
+                    color: 0xffffff,
+                });
+
+                // 物体を作成
+                const mesh = new THREE.Points(geometry, material);
+                scene.add(mesh);
+            }
+
             // マウス座標はマウスが動いた時のみ取得できる
             document.addEventListener('mousemove', (event) => {
                 mouseX = event.pageX;
