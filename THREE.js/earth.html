@@ -58,7 +58,7 @@
                 side: THREE.DoubleSide
             });
             //メッシュを作成
-            const earthMesh = new THREE.Mesh(geometry, material);
+            const earthMesh = new THREE.Mesh(geometry, material2);
             //3D空間にメッシュを追加
             scene.add(earthMesh);
 
@@ -75,7 +75,7 @@
 
             geometryList.map((geometry1, index) => {
                 //形状とマテリアルからメッシュを作成します
-                const mesh = new THREE.Mesh(geometry1, material);
+                const mesh = new THREE.Mesh(geometry, material);
 
                 //3D表示インスタンスのsceneプロパティーが3D表示空間となります
                 container.add(mesh);
