@@ -73,9 +73,9 @@
                 new THREE.TorusGeometry(50,30,16,100)   //ドーナツ状
             ];
 
-            geometryList.map((geometry1, index) => {
+            geometryList.map((geometry, index) => {
                 //形状とマテリアルからメッシュを作成します
-                const mesh = new THREE.Mesh(geometry, material);
+                const mesh = new THREE.Mesh(geometry, material1);
 
                 //3D表示インスタンスのsceneプロパティーが3D表示空間となります
                 container.add(mesh);
