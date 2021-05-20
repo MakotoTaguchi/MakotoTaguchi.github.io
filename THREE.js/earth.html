@@ -33,7 +33,7 @@
             scene.add(container);
 
             //マテリアルを作成
-            const material = new THREE.MeshStandardMaterial({
+            const material1 = new THREE.MeshStandardMaterial({
                 color: 0xff0000,
                 side: THREE.DoubleSide
             });
@@ -53,12 +53,12 @@
             const loader = new THREE.TextureLoader();
             const texture = loader.load('image/earthmap1k.jpg');
             //マテリアルにテクスチャーを設定
-            const material = new THREE.MeshStandardMaterial({
+            const material2 = new THREE.MeshStandardMaterial({
                 map: texture,
                 side: THREE.DoubleSide
             });
             //メッシュを作成
-            const earthMesh = new THREE.Mesh(geometry, material);
+            const earthMesh = new THREE.Mesh(geometry2, material);
             //3D空間にメッシュを追加
             scene.add(earthMesh);
 
@@ -73,9 +73,9 @@
                 new THREE.TorusGeometry(50,30,16,100)   //ドーナツ状
             ];
 
-            geometryList.map((geometry, index) => {
+            geometryList.map((geometry1, index) => {
                 //形状とマテリアルからメッシュを作成します
-                const mesh = new THREE.Mesh(geometry, material);
+                const mesh = new THREE.Mesh(geometry1, material);
 
                 //3D表示インスタンスのsceneプロパティーが3D表示空間となります
                 container.add(mesh);
