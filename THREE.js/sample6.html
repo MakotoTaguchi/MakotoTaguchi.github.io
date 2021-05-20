@@ -22,7 +22,7 @@
             const scene = new THREE.Scene();
 
             // カメラを作成
-            const camera = new THREE.PerspectiveCamera(45, width / height);
+            const camera = new THREE.PerspectiveCamera(45, width / height); //(画角,アスペクト比,描画開始距離,描画終了距離)
 
             // 平行光源を作成
             const directionalLight = new THREE.DirectionalLight(0xffffff);
@@ -34,12 +34,19 @@
                 map: new THREE.TextureLoader().load('image/earthmap1k.jpg'),
                 side: THREE.DoubleSide,
             });
-
-            // 球体の形状を作成します
-            const geometry = new THREE.SphereGeometry(300, 30, 30);
-            // 形状とマテリアルからメッシュを作成します
+            //球体を作成
+            const geometry = new THREE.SphereGeometry(300, 30, 30);    //(幅,高さ,奥行き)
+            //画像を読み込む
+            const loader = new THREE.TextureLoader();
+            const texture = loader.load('image/earthmap1k.jpg');
+            //マテリアルにテクスチャーを設定
+            const material = new THREE.MeshStandardMaterial({
+                map: texture,
+                side: THREE.DoubleSide
+            });
+            //メッシュを作成
             const earthMesh = new THREE.Mesh(geometry, material);
-            // シーンにメッシュを追加します
+            //3D空間にメッシュを追加
             scene.add(earthMesh);
 
             // 星屑を作成します (カメラの動きをわかりやすくするため)
