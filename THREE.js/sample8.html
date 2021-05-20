@@ -1,4 +1,6 @@
-﻿<html>
+﻿<!DOCTYPE html>
+
+<html>
 <head>
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
@@ -113,6 +115,11 @@
                 const mesh = new THREE.Points(geometry, material);
                 scene.add(mesh);
             }
+
+            // マウス座標はマウスが動いた時のみ取得できる
+            document.addEventListener('mousemove', (event) => {
+                mouseX = event.pageX;
+            });
 
             tick();
 
