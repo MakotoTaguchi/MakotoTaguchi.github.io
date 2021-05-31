@@ -23,11 +23,11 @@
   var camera = new THREE.PerspectiveCamera(45, width / height, 1, 1000);
 
  var textureLoader = new THREE.TextureLoader();
-  var texture = textureLoader.load("basket.jpg");
+  var texture = textureLoader.load("image/basket.jpg");
   var mat = new THREE.MeshPhongMaterial();
   mat.map = texture;
 
-  var bump = textureLoader.load("basket1.jpg");
+  var bump = textureLoader.load("image/basket1.jpg");
   mat.bumpMap = bump;
   mat.bumpscale = 0.2;
 
