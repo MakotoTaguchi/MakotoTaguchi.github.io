@@ -16,9 +16,11 @@
     renderer.setSize(width, height);
     document.body.appendChild(renderer.domElement);
 
-    var scene = new THREE.Scene();
+      const scene = new THREE.Scene();
 
       const camera = new THREE.PerspectiveCamera(45, width / height);
+
+      camera.position.set(0, 0, 1000);
 
       const controls = new THREE.OrbitControls(camera, document.body);
 
