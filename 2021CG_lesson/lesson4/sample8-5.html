@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="OrbitControls.js"></script>
+    <script>
+      // ページの読み込みを待つ
+      window.addEventListener('load', init);
+
+      function init() {
+        // サイズを指定
+        const width = 960;
+        const height = 540;
+
+        // レンダラーを作成
+        const renderer = new THREE.WebGLRenderer({
+          canvas: document.querySelector('#myCanvas')
+        });
+        renderer.setSize(width, height);
+        // 背景の色を設定
+        renderer.setClearColor(0xeeeeff);
+
+        // シーンを作成
+        const scene = new THREE.Scene();
+
+        // カメラを作成
+        const camera = new THREE.PerspectiveCamera(45, width / height);
+        // カメラの初期座標を設定
+        camera.position.set(0, 0, 1000);
+
+        // カメラコントローラーを作成
+        const controls = new THREE.OrbitControls(camera,document.body);
+  
+        // 平行光源1
+        var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+        directionalLight1.position.set(100, 100, 100);
+        // シーンに追加
+        scene.add(directionalLight1);
+        // 平行光源2
+        var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+        directionalLight2.position.set(-100, 100, 100);
+        // シーンに追加
+        scene.add(directionalLight2);
+
+        // helper
+      const gridHelper = new THREE.GridHelper(200,50); // size, step
+      scene.add(gridHelper);
+
+      const axisHelper = new THREE.AxisHelper(200,50);
+      scene.add(axisHelper);
+
+        // 木0をスプライトで作成
+        var textureLoader = new THREE.TextureLoader();  
+        var texture0 = textureLoader.load("img/tree0.png");
+        const material0 = new THREE.SpriteMaterial({ map: texture0,});
+
+        const sprite0 = new THREE.Sprite(material0);
+        sprite0.position.x = 0;
+        sprite0.position.y = 50;
+        sprite0.position.z = 0;
+        sprite0.scale.set(100,100,100);
+        scene.add(sprite0);
+
+        // 木1をスプライトで作成 
+        var texture1 = textureLoader.load("img/tree1.png");
+        const material1 = new THREE.SpriteMaterial({ map: texture1,});
+
+        const sprite1 = new THREE.Sprite(material1);
+        sprite1.position.x = 100;
+        sprite1.position.y = 50;
+        sprite1.position.z = -100;
+        sprite1.scale.set(100,100,100);
+        scene.add(sprite1);
+
+        // 木1をスプライトで作成 
+        var texture2 = textureLoader.load("img/tree2.png");
+        const material2 = new THREE.SpriteMaterial({ map: texture2,});
+
+        const sprite2 = new THREE.Sprite(material2);
+        sprite2.position.x = -100;
+        sprite2.position.y = 50;
+        sprite2.position.z = -100;
+        sprite2.scale.set(100,100,100);
+        scene.add(sprite2);
+
+        tick();
+        // 毎フレーム時に実行されるループイベントです
+        function tick() {
+          // レンダリング
+          renderer.render(scene, camera);
+          requestAnimationFrame(tick);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <canvas id="myCanvas"></canvas>
+  </body>
+</html>
