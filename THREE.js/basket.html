@@ -48,13 +48,15 @@
 
  var directionalLight3 = new THREE.DirectionalLight(0xffffff);
   directionalLight3.position.set(1, -10, 1);
-  scene.add(directionalLight3);
+      scene.add(directionalLight3);
 
-  var update = function() {
-    requestAnimationFrame(update);
+      tick();
+
+  function tick() {
+    requestAnimationFrame(tick);
 
 
-    sphere.rotation.y += 0.01;
+    // sphere.rotation.y += 0.01;
 
     renderer.render(scene, camera);
   };
