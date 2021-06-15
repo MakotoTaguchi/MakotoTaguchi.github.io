@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>group</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
+    <script src="OrbitControls.js"></script>
     <script>
         // ページの読み込み
         window.addEventListener('load', init);
@@ -28,6 +29,9 @@
             const camera = new THREE.PerspectiveCamera(45, width / height);
             camera.position.set(-100, 150, 500);
             camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+            // カメラコントローラー
+            const controls = new THREE.OrbitControls(camera, canvasElement);
 
             // 地面
             scene.add(new THREE.GridHelper(600));
