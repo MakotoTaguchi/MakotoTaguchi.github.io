@@ -42,7 +42,7 @@
 
             // マテリアルを作成
             const material = new THREE.MeshStandardMaterial({
-                map: newTHREE.TextureLoader().load('image/earthmap1k.jpg'),
+                map: new THREE.TextureLoader().load('image/earthmap1k.jpg'),
             });
 
             //球体を作成
