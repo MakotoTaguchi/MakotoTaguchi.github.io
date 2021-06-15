@@ -22,7 +22,7 @@
             });
             renderer.setSize(width, height);
             // 背景の色を設定
-            renderer.setClearColor(0xffffff);
+            renderer.setClearColor(0xeeeeff);
 
             // シーン
             const scene = new THREE.Scene();
@@ -48,7 +48,7 @@
             // バンプマップ
             var bump = textureLoader.load("image/ball_normal.png");
             mat.bumpMap = bump;
-            mat.bumpscale = 0.2;
+            mat.bumpscale = 0.8;
 
             // 球体
             var sphereGeometry = new THREE.SphereGeometry(300, 30, 30);
