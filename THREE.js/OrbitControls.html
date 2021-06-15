@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="ja">
 <head>
     <meta charset="utf-8" />
     <title>OrbitControlsを使おう</title>
@@ -36,6 +36,8 @@
             // 形状とマテリアルからメッシュ作成
             const mesh = new THREE.Mesh(new THREE.BoxGeometry(300, 300, 300), new THREE.MeshNormalMaterial());
             scene.add(mesh);
+
+            tick();
 
             // 毎フレーム時に実行されるループイベントです
             function tick() {
