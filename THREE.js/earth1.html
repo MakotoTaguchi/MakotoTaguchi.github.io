@@ -1,0 +1,111 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
+    <script src="js/controls/OrbitControls.js"></script>
+    <script>
+        // ページの読み込みを待つ
+        window.addEventListener('load', init);
+
+        function init() {
+            // サイズを指定
+            const width = 960;
+            const height = 540;
+
+            const canvasElement = document.querySelector('#myCanvas');
+
+            // レンダラーを作成
+            const renderer = new THREE.WebGLRenderer({
+                canvas: canvasElement,
+            });
+            renderer.setSize(width, height);
+
+            // シーンを作成
+            const scene = new THREE.Scene();
+
+            // カメラを作成
+            const camera = new THREE.PerspectiveCamera(45, width / height); //(画角,アスペクト比,描画開始距離,描画終了距離)
+            // カメラの初期座標を設定
+            camera.position.set(0, 0, 1000);
+
+            // カメラコントローラーを作成
+            const controls = new THREE.OrbitControls(camera, canvasElement);
+
+            // 滑らかにカメラコントローラーを制御する
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.2;
+
+            // 平行光源を作成
+            const directionalLight = new THREE.DirectionalLight(0xffffff);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+
+            // マテリアルを作成
+            const material = new THREE.MeshStandardMaterial({
+                map: newTHREE.TextureLoader().load('image/earthmap1k.jpg'),
+            });
+
+            //球体を作成
+            const geometry = new THREE.SphereGeometry(300, 30, 30);    //(幅,高さ,奥行き)
+            // 形状とマテリアルからメッシュを作成
+            const earthMesh = new THREE.Mesh(geometry, material);
+            // シーンにメッシュを追加
+            scene.add(earthMesh);
+
+            //メッシュを作成
+            const earthMesh = new THREE.Mesh(geometry, material);
+            //3D空間にメッシュを追加
+            scene.add(earthMesh);
+
+            // 星屑を作成します (カメラの動きをわかりやすくするため)
+            createStarField();
+
+            /** 星屑を作成します */
+            function createStarField() {
+                // 頂点情報を作詞絵
+                const vertices = [];
+                for (let i = 0; i < 1000; i++) {
+                    const x = 3000 * (Math.random() - 0.5);
+                    const y = 3000 * (Math.random() - 0.5);
+                    const z = 3000 * (Math.random() - 0.5);
+
+                    vertices.push(x, y, z);
+                }
+
+                // 形状データを作成
+                const geometry = new THREE.BufferGeometry();
+                geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+                // マテリアルを作成
+                const material = new THREE.PointsMaterial({
+                    size: 10,
+                    color: 0xffffff,
+                });
+
+                // 物体を作成
+                const mesh = new THREE.Points(geometry, material);
+                scene.add(mesh);
+            }
+
+            tick();
+
+            // 毎フレーム時に実行されるループイベントです
+            function tick() {
+                // 地球は常に回転させておく
+                earthMesh.rotation.y += 0.00001;
+
+                // カメラコントローラーを更新
+                controls.update();
+
+                // レンダリング
+                renderer.render(scene, camera);
+
+                requestAnimationFrame(tick);
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+</body>
+</html>
