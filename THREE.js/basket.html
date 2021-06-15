@@ -2,75 +2,81 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>sample1</title>
+    <title>basketball</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js"></script>
     <script src="OrbitControls.js"></script>
     <script>
-  var init = function() {
+        // ページの読み込み
+        window.addEventListener('load', init);
 
-    var width = 800,
-        height = 600;
+        function init() {
+            // サイズを指定
+            var width = 960;
+            var height = 540;
 
-      const renderer = new THREE.WebGLRenderer({
-          canvas: document.querySelector('#myCanvas')
-      });
-      renderer.setSize(width, height);
+            // レンダラー
+            const canvasElement = document.querySelector('#myCanvas');
+            const renderer = new THREE.WebGLRenderer({
+                canvas: canvasElement,
+            });
+            renderer.setSize(width, height);
 
-      const scene = new THREE.Scene();
+            // シーン
+            const scene = new THREE.Scene();
 
-      const camera = new THREE.PerspectiveCamera(45, width / height);
+            // カメラ
+            const camera = new THREE.PerspectiveCamera(45, width / height);
+            // カメラの初期座標を設定
+            camera.position.set(0, 0, 1000);
 
-      //camera.position.set(0, 0, 1000);
+            // カメラコントローラーを作成
+            const controls = new THREE.OrbitControls(camera, canvasElement);
 
-      camera.lookAt(new THREE.Vector3(0, 0, 0));
+            // テクスチャー
+            var textureLoader = new THREE.TextureLoader();
+            var texture = textureLoader.load("image/ball.png");
+            var mat = new THREE.MeshPhongMaterial();
+            mat.map = texture;
 
-      const controls = new THREE.OrbitControls(camera, document.body);
+            // バンプマップ
+            var bump = textureLoader.load("image/ball_normal.png");
+            mat.bumpMap = bump;
+            mat.bumpscale = 0.2;
 
- var textureLoader = new THREE.TextureLoader();
-  var texture = textureLoader.load("image/basketball.jpg");
-  var mat = new THREE.MeshPhongMaterial();
-  mat.map = texture;
+            // 球体
+            var sphereGeometry = new THREE.SphereGeometry(5, 32, 32);
+            var sphere = new THREE.Mesh(sphereGeometry, mat);
+            sphere.position.set(1.5, 0, -5);
+            scene.add(sphere);
 
-  var bump = textureLoader.load("image/basketball.jpg");
-  mat.bumpMap = bump;
-  mat.bumpscale = 0.2;
+            // 平行光源1
+            var directionalLight1 = new THREE.DirectionalLight(0xffffff);
+            directionalLight1.position.set(100, 100, 100);
+            // 追加
+            scene.add(directionalLight1);
 
-  var sphereGeometry = new THREE.SphereGeometry( 1.0, 40, 40 );
-  var sphere = new THREE.Mesh( sphereGeometry, mat );
-  sphere.position.set( 0, 0, -5 );
-  sphere.rotation.x = 0.2;
-  scene.add( sphere );
+            // 平行光源2
+            var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+            directionalLight2.position.set(-100, 100, 100);
+            // 追加
+            scene.add(directionalLight2);
 
+            tick();
 
-  var directionalLight1 = new THREE.DirectionalLight(0xffffff);
-  directionalLight1.position.set(1, 1, 1);
-  scene.add(directionalLight1);
+            // ループイベント
+            function tick() {
 
-  var directionalLight2 = new THREE.DirectionalLight(0xffffff);
-  directionalLight2.position.set(-10, 1, 1);
-  scene.add(directionalLight2);
+                sphere.rotation.y += 0.01;
 
- var directionalLight3 = new THREE.DirectionalLight(0xffffff);
-  directionalLight3.position.set(1, -10, 1);
-      scene.add(directionalLight3);
-
-      tick();
-
-  function tick() {
-    requestAnimationFrame(tick);
-
-
-   // sphere.rotation.y += 0.01;
-
-    renderer.render(scene, camera);
-  };
-  tick();
-}
-  window.addEventListener('DOMContentLoaded', init);
+                // レンダリング
+                renderer.render(scene, camera);
+                requestAnimationFrame(tick)
+            }
+        }
     </script>
 </head>
-    <body>
-        <canvas id="myCanvas"></canvas>
-    </body>
+<body>
+    <canvas id="myCanvas"></canvas>
+</body>
 </html>
