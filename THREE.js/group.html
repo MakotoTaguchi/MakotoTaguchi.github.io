@@ -54,17 +54,17 @@
 
                 // グループ
                 group.add(mesh);
+            }
 
-                tick();
+            tick();
 
-                // ループイベント
-                function tick() {
-                    group.rotation.y += 0.01;
+            // ループイベント
+            function tick() {
+                group.rotation.y += 0.01;
 
-                    // レンダリング
-                    renderer.render(scene, camera);
-                    requestAnimationFrame(tick);
-                }
+                // レンダリング
+                renderer.render(scene, camera);
+                requestAnimationFrame(tick);
             }
         }
     </script>
