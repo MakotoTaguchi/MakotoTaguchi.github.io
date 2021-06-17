@@ -80,10 +80,10 @@
             loader.setResourcePath('./texture/');
             // 3dsファイルのパスを指定
             loader.load('js/basketball.3DS', (object) => {
+                object.rotation.x = -Math.PI / 2;
                 // 読み込み後に3D空間に追加
                 scene.add(object);
             });
-            loader.rotation.x = -Math.PI / 2;
 
             tick();
             // 毎フレーム時に実行されるループイベントです
