@@ -48,10 +48,11 @@
         scene.add(ambientLight);
 
         // OBJ形式のモデルデータを読み込む
-        const loader = new OBJLoader();
+        const loader = new THREE.OBJLoader();
         // objファイルのパスを指定
         loader.load('js/basketball_hoop.obj', (root) => {
             // 読み込み後に3D空間に追加
+            const model = obj.scene;
             scene.add(root);
         });
 
