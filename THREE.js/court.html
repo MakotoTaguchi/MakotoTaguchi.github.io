@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
     <script src="js/OrbitControls.js"></script>
+    <script src="js/inflate.min.js"></script>
     <script src="js/FBXLoader.js"></script>
 
     <script>
@@ -46,9 +47,12 @@
         // 3DS形式のモデルデータを読み込む
         const loader = new THREE.FBXLoader();
         // 3dsファイルのパスを指定
-        loader.load('js/Court.FBX', (FBX) => {
-          // 読み込み後に3D空間に追加
-          scene.add(FBX);
+        loader.load('js/Court.FBX', (fbx) => {
+            fbx.position.set(0, 0, 0);
+		    fbx.scale.set(SIZE_FBX, SIZE_FBX, SIZE_FBX);
+		    fbx.rotation.set(0, Math.PI, 0);
+            // 読み込み後に3D空間に追加
+            scene.add(FBX);
         });
 
         tick();
