@@ -46,7 +46,7 @@
         // 3DS形式のモデルデータを読み込む
         const loader = new THREE.FBXLoader();
         // 3dsファイルのパスを指定
-        loader.load('js/Court.EBX', (FBX) => {
+        loader.load('js/Court.FBX', (FBX) => {
           // 読み込み後に3D空間に追加
           scene.add(FBX);
         });
