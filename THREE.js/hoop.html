@@ -83,9 +83,7 @@
                 // 読み込み後に3D空間に追加
                 scene.add(object);
             });
-            loader.position.x = 0;
-            loader.position.y = 50;
-            loader.position.z = 0;
+            loader.rotation.x = -Math.PI / 2;
 
             tick();
             // 毎フレーム時に実行されるループイベントです
