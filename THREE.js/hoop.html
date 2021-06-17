@@ -30,7 +30,7 @@
             // カメラを作成
             const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
             // カメラの初期座標を設定
-            camera.position.set(0, -1000, 0);
+            camera.position.set(0, 0, 1000);
 
             // カメラコントローラーを作成
             const controls = new THREE.OrbitControls(camera, canvasElement);
@@ -69,7 +69,7 @@
             mat.bumpscale = 0.8;
 
             // 球体
-            var sphereGeometry = new THREE.SphereGeometry(300, 30, 30);
+            var sphereGeometry = new THREE.SphereGeometry(50, 30, 30);
             var sphere = new THREE.Mesh(sphereGeometry, mat);
             sphere.position.set(1.5, 0, -5);
             scene.add(sphere);
