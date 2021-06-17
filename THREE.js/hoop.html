@@ -37,7 +37,7 @@
 
             // 平行光源1を作成
             const directionalLight1 = new THREE.DirectionalLight(0xffffff);
-            directionalLight1.position.set(1, 1, 1);
+            directionalLight1.position.set(100, -100, 100);
             scene.add(directionalLight1);
             // 平行光源2
             var directionalLight2 = new THREE.DirectionalLight(0xffffff);
@@ -49,12 +49,13 @@
             scene.add(ambientLight);
             */
 
-            // helper
+            /*// helper
             const gridHelper = new THREE.GridHelper(200, 50); // size, step
             scene.add(gridHelper);
 
             const axisHelper = new THREE.AxisHelper(200, 50);
             scene.add(axisHelper);
+            */
 
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
