@@ -82,11 +82,11 @@
             // テクスチャー1
             var textureLoader1 = new THREE.TextureLoader();
             var texture1 = textureLoader1.load("image/ball.png");
-            var mat1 = new THREE.MeshPhongMaterial();
 
             // 床の作成
-            const geometry = new THREE.PlaneGeometry(100, 400, 100);
-            const plane = new THREE.Mesh(geometry, mat1);
+            const geometry = new THREE.PlaneGeometry(300, 400, 100);
+            const material = new THREE.MeshPhongMaterial({ map: texture1 });
+            const plane = new THREE.Mesh(geometry, material);
             scene.add(plane);
 
             // 3DS形式のモデルデータを読み込む
