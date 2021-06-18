@@ -79,6 +79,16 @@
             sphere.position.set(0, 0, 100);
             scene.add(sphere);
 
+            // マテリアルを作成
+            const material = new THREE.MeshStandardMaterial({
+                court: new THREE.TextureLoader().load('image/court.jpg'),
+            });
+
+            // 床の作成
+            const geometry = new THREE.PlaneGeometry(5, 20, 32);
+            const plane = new THREE.Mesh(geometry, material);
+            scene.add(plane);
+
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
             // テクスチャーのパスを指定
