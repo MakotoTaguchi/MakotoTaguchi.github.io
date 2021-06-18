@@ -79,14 +79,14 @@
             sphere.position.set(0, 0, 100);
             scene.add(sphere);
 
-            // マテリアルを作成
-            const material = new THREE.MeshStandardMaterial({
-                court: new THREE.TextureLoader().load('image/court.jpg'),
-            });
+            // テクスチャー1
+            var textureLoader1 = new THREE.TextureLoader();
+            var texture1 = textureLoade1r.load("image/ball.png");
+            var mat1 = new THREE.MeshPhongMaterial();
 
             // 床の作成
-            const geometry = new THREE.PlaneGeometry(100, 100, 100);
-            const plane = new THREE.Mesh(geometry, material);
+            const geometry = new THREE.PlaneGeometry(100, 400, 100);
+            const plane = new THREE.Mesh(geometry, mat1);
             scene.add(plane);
 
             // 3DS形式のモデルデータを読み込む
