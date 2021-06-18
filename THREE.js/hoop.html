@@ -88,6 +88,7 @@
             const material = new THREE.MeshPhongMaterial({ map: texture1 });
             const plane = new THREE.Mesh(geometry, material);
             scene.add(plane);
+            plane.rotation.x = -Math.PI / 2;
 
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
