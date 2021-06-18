@@ -69,9 +69,9 @@
             mat.bumpscale = 0.8;
 
             // 球体
-            var sphereGeometry = new THREE.SphereGeometry(32, 16, 16);
+            var sphereGeometry = new THREE.SphereGeometry(5, 32, 32);
             var sphere = new THREE.Mesh(sphereGeometry, mat);
-            sphere.position.set(1.5, 0, -5);
+            sphere.position.set(0, 0, -300);
             scene.add(sphere);
 
             // 3DS形式のモデルデータを読み込む
