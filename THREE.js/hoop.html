@@ -73,8 +73,9 @@
             });
 
             const sprite = new THREE.Sprite(spmaterial);
-            scene.add(sprite);
+            sprite.scale.set(10, 10, 10);
             sprite.position.set(0, 100, 0);
+            scene.add(sprite);
             
             // テクスチャー1
             var textureLoader1 = new THREE.TextureLoader();
