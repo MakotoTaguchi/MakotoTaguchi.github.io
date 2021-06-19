@@ -66,16 +66,6 @@
             var sphere = new THREE.Mesh(sphereGeometry, mat);
             sphere.position.set(0, 4, 150);
             scene.add(sphere);
-
-            // スプライト
-            const spmaterial = new THREE.SpriteMaterial({
-                map: new THREE.TextureLoader().load('image/sprite.png'),
-            });
-
-            const sprite = new THREE.Sprite(spmaterial);
-            sprite.scale.set(10, 10, 10);
-            sprite.position.set(0, 100, 0);
-            scene.add(sprite);
             
             // テクスチャー1
             var textureLoader1 = new THREE.TextureLoader();
@@ -120,6 +110,17 @@
             scene.add(plane3);
             //plane3.rotation.x = -Math.PI / 2;
             plane3.position.set(0, 63, -100);
+
+            // テクスチャー3
+            var textureLoader3 = new THREE.TextureLoader();
+            var texture3 = textureLoader3.load("image/sprite.png");
+            var spmaterial = new THREE.SpriteMaterial({ map: texture3})
+
+            // スプライト作成
+            const sprite = new THREE.Sprite(spmaterial);
+            sprite.scale.set(100, 100, 100);
+            sprite.position.set(0, 100, 0);
+            scene.add(sprite);
 
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
