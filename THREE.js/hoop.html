@@ -113,13 +113,13 @@
 
             // テクスチャー3
             var textureLoader3 = new THREE.TextureLoader();
-            var texture3 = textureLoader3.load("image/basketball1.png");
+            var texture3 = textureLoader3.load("image/sprite.png");
             var spmaterial = new THREE.SpriteMaterial({ map: texture3})
 
             // スプライト作成
             const sprite = new THREE.Sprite(spmaterial);
             sprite.scale.set(100, 100, 100);
-            sprite.position.set(0, 100, 0);
+            sprite.position.set(0, 180, 0);
             scene.add(sprite);
 
             // 3DS形式のモデルデータを読み込む
