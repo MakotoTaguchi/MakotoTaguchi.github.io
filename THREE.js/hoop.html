@@ -79,13 +79,17 @@
             plane.rotation.x = -Math.PI / 2;
             plane.position.set(0, -12, 100);
 
+            // テクスチャー2
+            var textureLoader2 = new THREE.TextureLoader();
+            var texture2 = textureLoader2.load("image/wall.jpg");
+
             // 壁の作成
             const geometry1 = new THREE.PlaneGeometry(400, 150, 100);
-            const material1 = new THREE.MeshPhongMaterial({ color: 0xFF0000, side: THREE.DoubleSide });
+            const material1 = new THREE.MeshPhongMaterial({ map: texture2, side: THREE.DoubleSide });
             const plane1 = new THREE.Mesh(geometry1, material1);
             scene.add(plane1);
             plane1.rotation.y = -Math.PI / 2;
-            plane1.position.set(150, 62, 100);
+            plane1.position.set(150, 64, 100);
 
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
