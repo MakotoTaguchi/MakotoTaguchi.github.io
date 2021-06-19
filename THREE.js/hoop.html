@@ -101,14 +101,14 @@
             const geometry2 = new THREE.PlaneGeometry(300, 150, 100);
             const plane2 = new THREE.Mesh(geometry2, mat2);
             scene.add(plane2);
-            plane2.rotation.x = -Math.PI / 2;
-            plane2.position.set(0, 63, 100);
+            plane2.rotation.y = -Math.PI / 2;
+            plane2.position.set(-150, 63, 100);
 
             // 壁の作成3
             const geometry3 = new THREE.PlaneGeometry(400, 150, 100);
             const plane3 = new THREE.Mesh(geometry3, mat2);
             scene.add(plane3);
-            plane3.rotation.y = -Math.PI / 2;
+            plane3.rotation.x = -Math.PI / 2;
             plane3.position.set(0, 63, 100);
 
             // 3DS形式のモデルデータを読み込む
