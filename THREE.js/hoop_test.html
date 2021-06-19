@@ -86,7 +86,7 @@
 
             // 壁の作成
             const geometry1 = new THREE.PlaneGeometry(400, 150, 100);
-            const material1 = new THREE.MeshPhongMaterial({ map: texture2 });
+            const material1 = new THREE.MeshPhongMaterial({ map: texture2, side: THREE.DoubleSide });
             const plane1 = new THREE.Mesh(geometry1, material1);
             scene.add(plane1);
             plane1.rotation.y = -Math.PI / 2;
