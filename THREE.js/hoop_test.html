@@ -1,0 +1,145 @@
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/TDSLoader.js"></script>
+
+    <script>
+        // ページの読み込みを待つ
+        window.addEventListener('load', init);
+
+        function init() {
+            // サイズを指定
+            const width = 960;
+            const height = 540;
+
+            // レンダラーを作成
+            const canvasElement = document.querySelector('#myCanvas');
+            const renderer = new THREE.WebGLRenderer({
+                canvas: canvasElement,
+            });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(width, height);
+            // 背景の色を設定
+            renderer.setClearColor(0x00ffff);
+
+            // シーンを作成
+            const scene = new THREE.Scene();
+
+            // カメラを作成
+            const camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 10000);
+            // カメラの初期座標を設定
+            camera.position.set(-500, 500, 1000);
+
+            // カメラコントローラーを作成
+            const controls = new THREE.OrbitControls(camera, canvasElement);
+
+            // 平行光源1を作成
+            const directionalLight1 = new THREE.DirectionalLight(0xffffff);
+            directionalLight1.position.set(100, -100, 100);
+            scene.add(directionalLight1);
+            // 平行光源2
+            var directionalLight2 = new THREE.DirectionalLight(0xffffff);
+            directionalLight2.position.set(-100, 100, 100);
+            // シーンに追加
+            scene.add(directionalLight2);
+            // 平行光源3
+            var directionalLight3 = new THREE.DirectionalLight(0xffffff);
+            directionalLight3.position.set(-10, 0, -100);
+            // シーンに追加
+            scene.add(directionalLight3);
+
+            // テクスチャー
+            var textureLoader = new THREE.TextureLoader();
+            var texture = textureLoader.load("image/ball.png");
+            var mat = new THREE.MeshPhongMaterial();
+            mat.map = texture;
+
+            // バンプマップ
+            var bump = textureLoader.load("image/ball_normal.png");
+            mat.bumpMap = bump;
+            mat.bumpscale = 0.8;
+
+            // 球体
+            var sphereGeometry = new THREE.SphereGeometry(16, 32, 32);
+            var sphere = new THREE.Mesh(sphereGeometry, mat);
+            sphere.position.set(0, 170, 30);
+            sphere.rotation.z = -Math.PI / 2;
+            scene.add(sphere);
+
+            // テクスチャー1
+            var textureLoader1 = new THREE.TextureLoader();
+            var texture1 = textureLoader1.load("image/court.jpg");
+
+            // 床の作成
+            const geometry = new THREE.PlaneGeometry(300, 400, 100);
+            const material = new THREE.MeshPhongMaterial({ map: texture1 });
+            const plane = new THREE.Mesh(geometry, material);
+            scene.add(plane);
+            plane.rotation.x = -Math.PI / 2;
+            plane.position.set(0, -12, 100);
+
+            // テクスチャー2
+            var textureLoader2 = new THREE.TextureLoader();
+            var texture2 = textureLoader2.load("image/wall.jpg");
+
+            // 壁の作成
+            const geometry1 = new THREE.PlaneGeometry(400, 150, 100);
+            const plane1 = new THREE.Mesh(geometry1, texture2);
+            scene.add(plane1);
+            plane1.rotation.y = -Math.PI / 2;
+            plane1.position.set(150, 63, 100);
+
+            // 壁の作成2
+            const geometry2 = new THREE.PlaneGeometry(400, 150, 100);
+            const plane2 = new THREE.Mesh(geometry2, texture2);
+            scene.add(plane2);
+            plane2.rotation.y = -Math.PI / 2;
+            plane2.position.set(-150, 63, 100);
+
+            // 壁の作成3
+            const geometry3 = new THREE.PlaneGeometry(300, 150, 100);
+            const plane3 = new THREE.Mesh(geometry3, texture2);
+            scene.add(plane3);
+            //plane3.rotation.x = -Math.PI / 2;
+            plane3.position.set(0, 63, -100);
+
+            // テクスチャー3
+            var textureLoader3 = new THREE.TextureLoader();
+            var texture3 = textureLoader3.load("image/sprite.png");
+            var spmaterial = new THREE.SpriteMaterial({ map: texture3})
+
+            // スプライト作成
+            const sprite = new THREE.Sprite(spmaterial);
+            sprite.scale.set(100, 100, 100);
+            sprite.position.set(0, 230, 0);
+            scene.add(sprite);
+
+            // 3DS形式のモデルデータを読み込む
+            const loader = new THREE.TDSLoader();
+            // テクスチャーのパスを指定
+            loader.setResourcePath('./texture/');
+            // 3dsファイルのパスを指定
+            loader.load('js/basketball.3DS', (object) => {
+                object.rotation.x = -Math.PI / 2;
+                // 読み込み後に3D空間に追加
+                scene.add(object);
+            });
+
+            tick();
+            // 毎フレーム時に実行されるループイベントです
+            function tick() {
+                // ボールを回転させる
+                sphere.rotation.x += 0.01;
+                // レンダリング
+                renderer.render(scene, camera);
+                requestAnimationFrame(tick);
+            }
+        }
+    </script>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+</body>
+</html>
