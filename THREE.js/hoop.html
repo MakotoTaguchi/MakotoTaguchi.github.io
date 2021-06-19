@@ -82,14 +82,20 @@
             // テクスチャー2
             var textureLoader2 = new THREE.TextureLoader();
             var texture2 = textureLoader2.load("image/wall.jpg");
+            var mat2 = new THREE.MeshPhongMaterial({ side: THREE.DoubleSide});
+            mat2.map = texture2;
+
+            // バンプマップ
+            var bump2 = textureLoader2.load("image/wall.jpg");
+            mat2.bumpMap = bump2;
+            mat2.bumpscale = 0.8;
 
             // 壁の作成
             const geometry1 = new THREE.PlaneGeometry(400, 150, 100);
-            const material1 = new THREE.MeshPhongMaterial({ map: texture2, side: THREE.DoubleSide });
-            const plane1 = new THREE.Mesh(geometry1, material1);
+            const plane1 = new THREE.Mesh(geometry1, mat2);
             scene.add(plane1);
             plane1.rotation.y = -Math.PI / 2;
-            plane1.position.set(150, 64, 100);
+            plane1.position.set(150, 63, 100);
 
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
