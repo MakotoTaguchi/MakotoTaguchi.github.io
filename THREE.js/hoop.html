@@ -122,6 +122,18 @@
             sprite.position.set(0, 230, 0);
             scene.add(sprite);
 
+
+            // テクスチャー4
+            var textureLoader4 = new THREE.TextureLoader();
+            var texture4 = textureLoader4.load("image/basketball1.png");
+            var spmaterial1 = new THREE.SpriteMaterial({ map: texture4 })
+
+            // スプライト1作成
+            const sprite1 = new THREE.Sprite(spmaterial1);
+            sprite1.scale.set(50, 50, 50);
+            sprite1.position.set(0, 200, 50);
+            scene.add(sprite1);
+
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
             // テクスチャーのパスを指定
