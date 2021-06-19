@@ -86,21 +86,22 @@
 
             // 壁の作成
             const geometry1 = new THREE.PlaneGeometry(400, 150, 100);
-            const plane1 = new THREE.Mesh(geometry1, texture2);
+            const material1 = new THREE.MeshPhongMaterial({ map: texture2 });
+            const plane1 = new THREE.Mesh(geometry1, material1);
             scene.add(plane1);
             plane1.rotation.y = -Math.PI / 2;
             plane1.position.set(150, 63, 100);
 
             // 壁の作成2
             const geometry2 = new THREE.PlaneGeometry(400, 150, 100);
-            const plane2 = new THREE.Mesh(geometry2, texture2);
+            const plane2 = new THREE.Mesh(geometry2, material1);
             scene.add(plane2);
             plane2.rotation.y = -Math.PI / 2;
             plane2.position.set(-150, 63, 100);
 
             // 壁の作成3
             const geometry3 = new THREE.PlaneGeometry(300, 150, 100);
-            const plane3 = new THREE.Mesh(geometry3, texture2);
+            const plane3 = new THREE.Mesh(geometry3, material1);
             scene.add(plane3);
             //plane3.rotation.x = -Math.PI / 2;
             plane3.position.set(0, 63, -100);
