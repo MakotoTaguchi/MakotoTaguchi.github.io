@@ -77,7 +77,7 @@
             const plane = new THREE.Mesh(geometry, material);
             scene.add(plane);
             plane.rotation.x = -Math.PI / 2;
-            plane.position.set(0, -12, 0);
+            plane.position.set(0, -12, 100);
 
             // 壁の作成
             const geometry1 = new THREE.PlaneGeometry(400, 300, 100);
@@ -85,7 +85,7 @@
             const plane1 = new THREE.Mesh(geometry1, material1);
             scene.add(plane1);
             plane1.rotation.y = -Math.PI / 2;
-            plane1.position.set(150, -12 , 100);
+            plane1.position.set(150, 150 , 100);
 
             // 3DS形式のモデルデータを読み込む
             const loader = new THREE.TDSLoader();
