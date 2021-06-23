@@ -15,8 +15,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 result.textContent = '通信中...';
             }
         };
+        
         // サーバーとの非同期通信を開始
         xhr.open('GET', 'hello_ajax.php?name=' + encodeURIComponent(document.getElementById('name').value), true);
         xhr.send(null);
+        
+        xhr.addEventListener('loadstart', function () {
+            result.textContent = '通信中...';
+        }, false);
+
+        xhr.addEventListener('load', function () {
+            result.textContent = xhr.responseText;
+        }, false);
+
+        xhr.addEventListener('error', function () {
+            result.textContent = 'サーバーエラーが発生しました';
+        }, false);
     }, false);
 }, false);
