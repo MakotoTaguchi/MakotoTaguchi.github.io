@@ -1,0 +1,15 @@
+{
+  "name": "js_sample",
+  "version": "1.0.0",
+  "description": "JavaScript本格入門のサンプル",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoshihiro Yamada",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^1.0.1"
+  }
+}
