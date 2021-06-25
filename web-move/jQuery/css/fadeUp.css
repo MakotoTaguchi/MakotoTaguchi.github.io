@@ -1,0 +1,27 @@
+﻿@charset "utf-8";
+
+.box {
+    width: 220px;
+    background-color: #666;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0 20px 20px 0;
+}
+
+.fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+
+@keyframes fadeUpAnime{
+    from{
+        opacity:0;
+        transform:translateY(100px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
