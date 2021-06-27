@@ -1,10 +1,11 @@
 'use strict';
 
+// 動きのきっかけの基点となるアニメーションの名前を定義
 function fadeAnime() {
-    // 動きのきっかけの起点となるクラス名が画面内に入ったら動かしたいクラス名が追加される記述を追記
 
-    $('.fadeUpTrigger').each(function () { // fadeTriggerというクラス名が
-        var elemPos = $(this).offset().top - 50; // 上の50pxより、
+    // ふわっ
+    $('.fadeUpTrigger').each(function () { // fadeUpTriggerというクラス名が
+        var elemPos = $(this).offset().top - 50; // 上の 50px 要素より、
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight) {
@@ -14,8 +15,7 @@ function fadeAnime() {
         }
     });
     // ここまで 動きのきっかけ指定
-
-} //ここまで画面が読み込まれた後に動く記述
+}
 
 // 画面が読み込まれた後に動く記述
 $(window).on('load', function () {

@@ -1,0 +1,8 @@
+﻿/* 要素に対して遠近感を設定する */
+perspective:(50px);
+
+/*
+    perspective(値);
+    ※指定した要素だけに効果を適応させたい場合は、transformの中に書きます。
+    transform:perspective(値);
+*/

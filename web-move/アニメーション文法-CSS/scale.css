@@ -1,0 +1,10 @@
+﻿/* 伸縮 */
+transform:scale(1.1);
+
+/*
+    scale(伸縮の数値);
+    scaleX(X軸の伸縮の数値);
+    scaleY(Y軸の伸縮の数値);
+    scaleZ(Z軸の伸縮の数値);
+    scale3d(X軸の伸縮の数値,Y軸の伸縮の数値,Z軸の伸縮の数値);
+*/

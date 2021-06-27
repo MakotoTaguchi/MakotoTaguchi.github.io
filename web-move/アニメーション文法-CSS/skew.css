@@ -1,0 +1,8 @@
+﻿/* 傾斜 */
+transform:skew(50deg,50deg); /*傾斜はZ軸なし。2Dのみ*/
+
+/*
+    skew(X軸の傾斜角度,Y軸の傾斜角度);
+    skewX(X軸の傾斜角度);
+    skewY(Y軸の傾斜角度);
+*/

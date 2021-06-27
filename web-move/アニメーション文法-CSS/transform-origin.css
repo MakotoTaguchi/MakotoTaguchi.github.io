@@ -1,0 +1,11 @@
+﻿/* 要素の基点を指定する。 */
+transform-origin:(50px,50px);
+transform-origin:(center,center);
+transform-origin:(left);
+
+/* transform-origin:(X軸の位置,Y軸の位置,Z軸の位置); */
+/*
+    要素の中心の初期値は
+    2Dの場合 50%, 50%
+    3Dの場合 50%, 50%, 0
+*/

@@ -8,8 +8,13 @@
     <link rel="stylesheet" href="css/zoomIn.css" />
 </head>
 <body>
-    <div class="box zoomInClickTrigger">一回のみ</div>
-    <div class="box zoomInClickTriggerTimes">何回もできる</div>
+    <div class="wrapper">
+        <!-- クリックしたら1回だけ動く -->
+        <div class="box zoomInClickTrigger">クリックしたら1回だけぶわっ、ぽん（ズームイン）</div>
+
+        <!-- クリックしたら何度も動く -->
+        <div class="box zoomInClickTriggerTimes">クリックしたら何回もぶわっ、ぽん（ズームイン）</div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/zoomIn.js"></script>

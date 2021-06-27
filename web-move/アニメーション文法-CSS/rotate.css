@@ -1,0 +1,10 @@
+﻿/* 回転 */
+transform:rotate(40deg);
+
+/*
+    rotate(回転速度);
+    rotateX(X軸の回転速度);
+    rotateY(Y軸の回転速度);
+    rotateZ(Z軸の回転速度);
+    rotate3d(X軸,Y軸,Z軸,回転速度);
+*/

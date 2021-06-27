@@ -1,0 +1,3 @@
+﻿/* 三次元になった際に裏面を可視化するかどうか */
+backface-visibility: visible;  /*可視化する*/
+backface-visibility: hidden;  /*可視化しない*/

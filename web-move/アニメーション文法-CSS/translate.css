@@ -1,0 +1,10 @@
+﻿/* 移動 */
+transform:translate(50px,50px);
+
+/*
+    translate(X軸方向の移動距離,Y軸方向の移動距離);
+    translateX(X軸方向の移動距離);
+    translateY(Y軸方向の移動距離);
+    translateZ(Z軸方向の移動距離);
+    translate3d(X軸方向の移動距離,Y軸方向の移動距離,Z軸方向の移動距離);
+*/

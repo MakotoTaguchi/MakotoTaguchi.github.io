@@ -1,0 +1,6 @@
+﻿/* 奥行の基点となる位置を決める */
+perspective-origin:(20px 40px);
+perspective-origin:(50% 50%);
+perspective-origin:(left center);
+
+/* perspective-origin:(X軸の位置,Y軸の位置); */
