@@ -1,0 +1,7 @@
+﻿/* 動きをループさせる */
+animation-iteration-count:infinite;
+
+/*
+    infinite→無限に再生を繰り返す
+    数値→数値で再生回数を指定する(初期値1)
+*/

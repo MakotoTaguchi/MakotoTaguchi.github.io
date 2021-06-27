@@ -1,0 +1,9 @@
+﻿/* アニメーションの開始と終了時の状態を指定 */
+animation-fill-mode:backwards;
+
+/*
+    none→指定なし。初期値
+    forwards→元の状態に戻らずアニメーション最後の状態を維持
+    backwards→アニメーションの最初の状態に戻る
+    both→backwardsとforwardsの両方の状態を適用
+*/
