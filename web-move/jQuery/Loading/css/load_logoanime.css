@@ -1,0 +1,56 @@
+﻿@charset "utf-8";
+/*======== ローディング画面のためのCSS =======*/
+
+#splash{
+    /*fixedで全面に表示*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    text-align: center;
+    color: #fff;
+}
+
+/* Loading画面中央設置 */
+#splash_logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Loading アイコンの大きさ設定 */
+#splash_logo img{
+    width: 260px;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp{
+    animation-name: fadeUpAnime;
+    animation-duration:0.5s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*======== レイアウトのためのCSS =======*/
+#container{
+    width:100%;
+    height:100vh;
+    background:#ccc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
