@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.jsテスト</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>回分チェック</h1>
+      <label for="inStr">文字列を入力して:</label>
+      <input type="text" name="inStr" v-model="inStr" />
+      <p>{{kaibun()}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/kaibun1.js"></script>
+  </body>
+</html>

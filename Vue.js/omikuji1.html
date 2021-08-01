@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.jsテスト</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button name="myBtn" @click="uranau()">占う</button>
+    </div>
+    <div>
+      <img v-bind:src="kuji" width="300" height="200" alt="おみくじ" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/omikuji1.js"></script>
+  </body>
+</html>
