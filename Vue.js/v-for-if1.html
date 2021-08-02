@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.jsテスト</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <table class="table">
+        <th>ID</th>
+        <th>名前</th>
+        <th>性別</th>
+        <th>都道府県</th>
+        <tr v-for="customer in customers" v-if="customer.age>=30">
+          <td>{{customer.id}}</td>
+          <td>{{customer.name}}</td>
+          <td>{{customer.age}}</td>
+          <td>{{customer.sex}}</td>
+          <td>{{customer.pref}}</td>
+        </tr>
+      </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/v-for-if1.js"></script>
+  </body>
+</html>
