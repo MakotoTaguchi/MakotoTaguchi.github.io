@@ -7,12 +7,11 @@
 
   <body>
     <div id="app">
-      <button name="myBtn" @click="uranau()">占う</button>
-      <div>
-        <img v-bind:src="kuji" width="300" height="200" alt="おみくじ" />
-      </div>
+      <ul>
+        <li v-for="(wday,i) in weekdays">{{i+1}} - {{wday}}曜日</li>
+      </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    <script src="js/omikuji1.js"></script>
+    <script src="js/v-for2.js"></script>
   </body>
 </html>

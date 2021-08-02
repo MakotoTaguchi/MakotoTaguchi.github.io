@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.jsテスト</title>
+    <style>
+      .center {
+        text-align: center;
+      }
+      .big {
+        font-size: 4em;
+        color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div>
+        <button @click="enhance=!enhance">クリックして</button>
+        <p v-bind:class="{center:true,big:enhance}">Vue.jsの世界</p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/class1.js"></script>
+  </body>
+</html>
