@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.jsテスト</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>料金は？</h1>
+      <label for="under3">3才未満</label>
+      <input id="under3" type="radio" v-model="age" value="under3" />
+      <label for="under13">13才未満</label>
+      <input id="under13" type="radio" v-model="age" value="under13" />
+      <label for="under65">65才未満</label>
+      <input id="under65" type="radio" v-model="age" value="under65" />
+      <label for="over65">65才以上</label>
+      <input id="over65" type="radio" v-model="age" value="over65" />
+      <br />
+      <p v-if="fare>=0">{{fare}}円</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/radiobutton1.js"></script>
+  </body>
+</html>
