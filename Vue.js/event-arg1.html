@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.jsテスト</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <button v-on:click="calcFare(19)">大人料金は？</button>
+      <button v-on:click="calcFare(9)">子供料金は？</button>
+      <h1 v-show="fare">料金：{{fare}}円</h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/event-arg1.js"></script>
+  </body>
+</html>
