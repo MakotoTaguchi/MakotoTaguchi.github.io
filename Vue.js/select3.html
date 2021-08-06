@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.jsテスト</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>行ってみたい国は？</h1>
+      <select v-model="countries" multiple>
+        <option v-for="c in clist" v-bind:value="c.en">{{c.ja}}</option>
+      </select>
+      <br />
+      <button v-on:click="countries=[]">クリア</button>
+      <ul>
+        <li v-for="c in countries">{{c}}</li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/select3.js"></script>
+  </body>
+</html>

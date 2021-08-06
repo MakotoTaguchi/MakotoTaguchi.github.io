@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.jsテスト</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>行ってみたい国は？</h1>
+      <label for="englaned">イギリス</label>
+      <input
+        type="checkbox"
+        id="england"
+        v-model="countries"
+        value="イギリス"
+      />
+      <label for="usa">アメリカ</label>
+      <input type="checkbox" id="usa" v-model="countries" value="アメリカ" />
+      <label for="china">中国</label>
+      <input type="checkbox" id="china" v-model="countries" value="中国" />
+      <label for="spain">スペイン</label>
+      <input type="checkbox" id="spain" v-model="countries" value="spain" />
+      <br />
+      <button @click="countries=[]">クリア</button>
+      <ul>
+        <li v-for="c in countries">{{c}}</li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/checkbox3.js"></script>
+  </body>
+</html>

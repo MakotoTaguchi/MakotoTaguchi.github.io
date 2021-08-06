@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.jsテスト</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>料金は？</h1>
+      <select v-model="age">
+        <option disabled value="">年齢？</option>
+        <option>3才未満</option>
+        <option>13才未満</option>
+        <option>65才未満</option>
+        <option>65才以上</option>
+      </select>
+      <br />
+      <p v-if="fare>=0">{{fare}}円</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/select1.js"></script>
+  </body>
+</html>

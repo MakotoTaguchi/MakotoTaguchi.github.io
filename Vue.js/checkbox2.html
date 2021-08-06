@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.jsテスト</title>
+  </head>
+  <body>
+    <div id="app">
+      <label for="adult">20才以上？</label>
+      <input
+        type="checkbox"
+        id="adult"
+        v-model="adult"
+        true-value="購入可能"
+        false-value="購入不可"
+      />
+      <br />
+      {{adult}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/checkbox2.js"></script>
+  </body>
+</html>
