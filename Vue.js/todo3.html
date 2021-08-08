@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.jsテスト</title>
+    <style>
+      .delbtn {
+        margin-left: 10px;
+      }
+      .done {
+        color: gray;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Todoリスト</h1>
+      <input
+        type="text"
+        v-model.trim="newtodo"
+        placeholder="todoを入力してください"
+      />
+      <button @click="addTodo">追加</button>
+      <ul>
+        <li
+          class="todolist"
+          v-for="todo,index in todolist"
+          v-bind:class="{done:todo.done}"
+          @mouseover="todo.hover=true"
+          @mouseout="todo.hover=false"
+        >
+          <input type="checkbox" v-model="todo.done" />
+          <span>{{todo.text}}</span>
+          <button
+            class="delbtn"
+            @click="remove(index)"
+            v-show="todo.done&&todo.hover"
+          >
+            x
+          </button>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/todo3.js"></script>
+  </body>
+</html>
