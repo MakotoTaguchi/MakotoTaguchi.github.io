@@ -1,5 +1,5 @@
 // Lineクラス
-class Line{
+class Line {
     constructor(points, color, width) {
         this.width = width;
         this.points = points;
@@ -8,12 +8,13 @@ class Line{
 }
 
 // Pointクラス
-class Point{
+class Point {
     constructor(x, y) {
         this.x = x;
         this.y = y;
     }
 }
+
 var vm = new Vue({
     el: '#app',
     data: {
@@ -26,19 +27,20 @@ var vm = new Vue({
         canvas: null
     },
     methods: {
-        mousedown: function (event) {
-            this.isDrawing = true; // 描画開始
+        mousedown: function(event) {
+            this.isDrawing = true; //描画開始
             this.points = [];
             this.points.push(new Point(event.offsetX, event.offsetY));
+
             // Lineオブジェクトを生成
             this.line = new Line(this.points, this.color, this.width);
             // linesに線を追加
             this.lines.push(this.line);
         },
-        mousemove: function (event) {
+        mousemove: function(event) {
             if (!this.isDrawing) return;
-            // console.log(event)
-            // ひとつ前のポイント
+            //console.log(event)
+            // 一つ前のポイント
             var prevPoint = this.line.points[this.line.points.length - 1];
 
             // 線を描く
@@ -52,28 +54,27 @@ var vm = new Vue({
             ctx.moveTo(prevPoint.x, prevPoint.y);
             ctx.lineTo(x, y);
             ctx.stroke();
-            ctx.closePath();
             this.line.points.push(new Point(x, y));
         },
-        mouseup: function (event) {
+        mouseup: function(event) {
             this.isDrawing = false;
         },
-        clearAll: function () {
+        clearAll: function() {
             this.lines = []
             var ctx = this.canvas.getContext('2d');
             ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
         },
-        undo: function () {
+        undo: function() {
             if (this.lines.length == 0) return;
-
+            
             // キャンバスをクリアする
             var ctx = this.canvas.getContext('2d');
-            ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+            ctx.clearRect(0, 0, this.canvas.width, this.canvas.height) 
             
             // 最後の線を削除
             this.lines.pop();
-
-            // ポイントを2つずつ取り出して描画する
+            
+            // ポイントを2つずつ取り出すして描画する
             for (i = 0; i < this.lines.length; i++) {
                 var line = this.lines[i];
                 for (j = 0; j < line.points.length - 1; j++) {
@@ -82,15 +83,15 @@ var vm = new Vue({
                     ctx.strokeStyle = line.color;
                     ctx.lineWidth = line.width;
                     ctx.beginPath();
-                    ctx.moveTo(point1.x, point2.y);
+                    ctx.moveTo(point1.x, point1.y);
                     ctx.lineTo(point2.x, point2.y);
                     ctx.stroke();
                 }
             }
         },
-        redraw: function () {
+        redraw: function() {
             if (this.lines.length == 0) return;
-            // キャンパスをクリアする
+            // キャンバスをクリアする
             var ctx = this.canvas.getContext('2d');
             ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
             for (i = 0; i < this.lines.length; i++) {
@@ -102,15 +103,15 @@ var vm = new Vue({
                     ctx.strokeStyle = line.color;
                     ctx.lineWidth = line.width;
                     ctx.beginPath();
-                    ctx.moveTo(point1.x, point2.y);
+                    ctx.moveTo(point1.x, point1.y);
                     ctx.lineTo(point2.x, point2.y);
                     ctx.stroke();
                     ctx.closePath();
                 }
-            }
-        }
+            }                    
+        }        
     },
-    mounted: function () {
+    mounted: function() {
         this.canvas = this.$refs.myCanvas;
     }
 });
