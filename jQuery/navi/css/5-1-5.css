@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* 上部固定させるためのCSS */
+#header{
+    height: 100px; /*高さ指定*/
+    width: 100%; /*横幅指定*/
+
+    /* レイアウトのCSS */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* JavaScriptを使いfixedクラスが付与された際の設定 */
+#header.fixed{
+    position: fixed; /*fixedを設定して固定*/
+    z-index: 999; /*最前面へ*/
+    top: 0;
+    left: 0;
+}
+
+/* 以下は検証用のレイアウトのためのCSS */
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+}
+
+section{
+    padding: 30px 0;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+p{
+    font-size: 20px;
+    line-height: 30px;
+    padding: 20px;
+}
+
+#area-2{
+    background-color: #f3f3f3;
+}
+
+footer{
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
