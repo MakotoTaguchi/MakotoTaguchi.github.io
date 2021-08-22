@@ -1,0 +1,114 @@
+/* ナビゲーション固定 */
+nav{
+    /* stickyで固定 */
+    position: -webkit-sticky; /*Safari*/
+    position: sticky;
+    /* 固定したい位置 */
+    top: 100px;
+    /* ナビゲーションの形状 */
+    background: #fff;
+    border: 1px solid #eee;
+    box-shadow: 0 0 5px #ddd;
+    padding: 20px;
+}
+
+/* レイアウトのためのCSS */
+#container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#main-area{
+    width: 70%;
+}
+
+#sub-area{
+    width: 25%;
+    padding: 0px 20px 0 0;
+}
+
+/* 768px以下の見え方 */
+@media screen and (max-width:768px) {
+    #main-area{
+        width: 100%;
+    }
+
+    #sub-area{
+        width: 100%;
+        padding: 20px;
+    }
+
+    nav{
+        /* stickyからrelativeに戻す */
+        position: relative;
+        top: 0;
+    }
+}
+
+/* 以下は検証用のレイアウトのためのCSS */
+nav ul{
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+}
+
+section{
+    padding: 30px;
+}
+
+/* レイアウトのためのCSS */
+#header{
+    font-size: 2.0rem;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h2{
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.4rem;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+#area-2{
+    background: #f3f3f3;
+}
+
+#footer{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 25px;
+}
+
+small{
+    font-size: 1.2rem;
+}
+
+nav ul li a{
+    display: block;
+    transition: all 0.3s;
+    font-size: 1.5rem;
+}
+
+nav ul li.current a,
+nav ul li a:hover,
+nav ul li a:active{
+    color: #888;
+}
+
+nav ul li{
+    padding: 15px;
+}
