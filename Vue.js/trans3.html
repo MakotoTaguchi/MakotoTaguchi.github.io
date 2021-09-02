@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js</title>
+    <style>
+      .box {
+        width: 500px;
+        height: 200px;
+        background: #e4e0ad;
+      }
+      .img {
+        position: absolute;
+        left: 300px;
+        top: 10px;
+      }
+      .box-enter-active,
+      .box-leave-active {
+        transition: all 1s;
+      }
+      .box-enter,
+      .box-leave-to {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      .img-enter-active,
+      .img-leave-active {
+        transition: all 1s;
+      }
+      .img-enter {
+        opacity: 0;
+        left: 500px;
+      }
+      .img-leave-to {
+        opacity: 0;
+        transform: scale(0.1) rotate(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="show=!show">menu</button>
+      <transition name="box">
+        <div class="box" v-if="show">
+          <h1>本日のおすすめ</h1>
+          <ul>
+            <li v-for="food in menu">{{food}}</li>
+          </ul>
+        </div>
+      </transition>
+      <transition name="img">
+        <div class="img" v-if="show">
+          <img src="img/sheep.png" width="250" height="208" />
+        </div>
+      </transition>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/trans1.js"></script>
+  </body>
+</html>

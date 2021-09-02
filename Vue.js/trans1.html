@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue.js</title>
+    <style>
+      .box {
+        width: 400px;
+        height: 200px;
+        background: #e4e0ad;
+      }
+      .v-enter {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      .v-enter-active {
+        transition: all 1s;
+      }
+      .v-enter-to {
+        opacity: 1;
+      }
+      .v-leave {
+        opacity: 1;
+      }
+      .v-leave-active {
+        transition: all 1s;
+      }
+      .v-leave-to {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="show=!show">menu</button>
+      <transition>
+        <div class="box" v-if="show">
+          <h1>本日のおすすめ</h1>
+          <ul>
+            <li v-for="food in menu">{{food}}</li>
+          </ul>
+        </div>
+      </transition>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/trans1.js"></script>
+  </body>
+</html>
