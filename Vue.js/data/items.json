@@ -1,0 +1,74 @@
+{
+    "items":[
+        {
+            "id":1,
+            "name":"逆引きPython標準ライブラリ",
+            "price":3240,
+            "stock":5,
+            "author":"田中一郎"
+        },
+        {
+            "id":2,
+            "name":"楽しく学ぶJava",
+            "price":2970,
+            "stock":10,
+            "author":"大津真"
+        },
+        {
+			"id": 3,			
+			"name": "6日間で楽しく学ぶLinuxコマンドライン入門",
+			"price": 3000,
+			"stock": 0,
+			"author": "猫山虎之助"
+		},
+		{
+			"id": 4,			
+			"name": "初めてのPythonプログラミング",
+			"price": 1500,
+			"stock": 5,
+			"author": "夏目龍之介"
+		},
+		{
+			"id": 5,			
+			"name": "iOSプログラミング入門",
+			"price": 2300,
+			"stock": 6,
+			"author": "山田太郎"
+		},
+		{
+			"id": 6,			
+			"name": "Apache入門",
+			"price": 700,
+			"stock": 7,
+			"author": "大津真"
+		},	
+		{
+			"id": 7,			
+			"name": "Logic Pro活用研究",
+			"price": 4200,
+			"stock": 7,
+			"author": "江藤五郎"
+		},	
+		{
+			"id": 8,			
+			"name": "Objective-C入門",
+			"price": 1200,
+			"stock": 0,
+			"author": "伊藤三四郎"
+		},	
+		{
+			"id": 9,			
+			"name": "初めてのnode.js",
+			"price": 450,
+			"stock": 10,
+			"author": "大竹まこと"
+		},			
+		{
+			"id": 10,			
+			"name": "ゼロから始めるC言語",
+			"price": 2300,
+			"stock": 2,
+			"author": "中野敬太郎"
+		}					
+    ]
+}
