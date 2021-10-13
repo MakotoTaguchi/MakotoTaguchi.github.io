@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <h1>やることリスト</h1>
+      <input type="text" id="text_name" />
+      <input type="button" value="追加" onclick="add()" />
+      <ul id="todoList"></ul>
+    </div>
+
+    <script>
+      counter = 0;
+
+      window.onload = function () {
+        l_length = localStorage.length;
+        var box = [];
+
+        for (var i = 0; i < l_length; i++) {
+          box_item = JSON.parse(localStorage.getItem("key" + i));
+          box.push(box_item);
+        }
+
+        for (var i = 0; i < box.length; i++) {
+          var li = document.createElement("li");
+          li.textContent = box[i];
+          document.getElementById("todoList").appendChild(li);
+        }
+      };
+
+      function add() {
+        var box = [];
+        var input = document.getElementById("text_name");
+        box.push(input.value);
+
+        localStorage.setItem("key" + counter, JSON.stringify(box));
+
+        for (var i = 0; i < box.length; i++) {
+          var li = document.createElement("li");
+          li.textContent = box[i];
+          document.getElementById("todoList").appendChild(li);
+        }
+        counter++;
+      }
+    </script>
+  </body>
+</html>
