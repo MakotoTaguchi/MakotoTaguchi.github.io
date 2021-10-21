@@ -23,12 +23,13 @@
         max-width: 1040px;
         margin: 0 auto;
         min-height: 50px;
-        padding: 16px;
+        padding: 14px;
         box-sizing: border-box;
     }
 
     .header h1 {
         font-size: 2rem;
+        top: 14px;
     }
 
     .header__navigation {
@@ -38,11 +39,25 @@
 
     .header__navigation ul li {
         display: inline-block;
+        margin-left: 40px;
+    }
+
+    .header__navigation ul li a {
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 600;
+        color: #333;
     }
 }
 
 .main {
     background-color: #f6f8f9;
+}
+
+@media (min-width:1040px) {
+    main {
+        padding-bottom: 120px;
+    }
 }
 
 .section-top {
@@ -78,6 +93,37 @@
     margin: 0 24px;
 }
 
+@media (min-width:480px) {
+    .section-top__image {
+        height: 600px;
+        margin-bottom: 80px;
+    }
+
+    .section-top__image h2 {
+        font-size: 3.2rem;
+        position: static;
+        max-width: 1040px;
+        margin: 0 auto;
+        text-align: left;
+        padding: 60px 0 0 24px;
+    }
+
+    .section-top__image-message {
+        font-size: 2.0rem;
+        position: static;
+        max-width: 1040px;
+        margin: 0 auto;
+        text-align: left;
+        padding: 25px 0 0 24px;
+    }
+
+    .section-top__lead {
+        font-size: 2.4rem;
+        font-weight: 600;
+        line-height: 4.0rem;
+    }
+}
+
 .section-menu {
     margin-bottom: 80px;
 }
@@ -92,7 +138,8 @@
 }
 
 .section-menu ul li {
-    width: 327px;
+    max-width: 327px;
+    margin: 0 auto;
     background-color: #fff;
     margin-bottom: 40px;
     border-radius: 6px;
@@ -117,6 +164,24 @@
 
 .section-menu__item-description span {
     font-size: 1.2rem;
+}
+
+@media (min-width:1040px) {
+    .section-menu ul {
+        max-width: 1040px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .section-menu ul li {
+        display: inline-block;
+        width: 320px;
+        margin-right: 40px;
+    }
+
+    .section-menu ul li:last-child {
+        margin-right: 0;
+    }
 }
 
 .section-access {
