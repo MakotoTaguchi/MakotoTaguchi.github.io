@@ -371,4 +371,14 @@
         margin: 0;
         display: block;
     }
+
+    .footer__sns_links {
+        float: right;
+    }
+
+    .footer small {
+        clear: both;
+        display: block;
+        text-align: center;
+    }
 }
