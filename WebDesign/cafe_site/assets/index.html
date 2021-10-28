@@ -7,21 +7,51 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=yes"
     />
+
+    <meta
+      name="description"
+      content="DHW CAFE はクリエイターのためのカフェ。
+    クリエイティビティが広がるような、おいしい飲み物を取り揃えています。"
+    />
+
+    <meta property="og:title" content="クリエイターのための「DHW CAFE」" />
+    <meta property="og:site_name" content="DHW CAFE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ja-JP" />
+    <meta property="og:image" content="assets/images/common/ogp.jpg" />
+    <meta
+      property="og:description"
+      content="DHW CAFE はクリエイターのためのカフェ。
+    クリエイティビティが広がるような、おいしい飲み物を取り揃えています。"
+    />
+    <meta name="twitter:card" content="summary" />
+
     <title>DHW CAFE</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/top.css" />
+    <link
+      rel="shortcut icon"
+      href="images/common/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="images/common/apple-touch-icon.png" />
   </head>
   <body>
     <header class="header">
       <h1 id="top">DHW CAFE</h1>
-      <nav class="header__navigation">
-        <ul>
-          <li><a href="#menu">MENU</a></li>
-          <li><a href="#access">ACCESS</a></li>
-          <li><a href="#news">NEWS</a></li>
-        </ul>
-      </nav>
+      <div id="nav-drawer">
+        <input class="none" type="checkbox" id="nav-input" />
+        <label id="nav-open" for="nav-input"><span></span></label>
+        <label id="nav-close" for="nav-input"></label>
+        <nav class="header__navigation">
+          <ul>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#access">ACCESS</a></li>
+            <li><a href="#news">NEWS</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main">
       <section class="section-top">
@@ -31,7 +61,7 @@
         </div>
         <div class="section-top__lead">
           <p>
-            DHW CAFE はクリエイターのためのカフェ。<br />
+            DHW CAFE はクリエイターのためのカフェ。
             クリエイティビティが広がるような、おいしい飲み物を取り揃えています。
           </p>
         </div>
