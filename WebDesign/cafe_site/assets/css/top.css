@@ -18,7 +18,7 @@
     display: none;
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
 
     /* ハンバーガーアイコン */
     #nav-drawer {
@@ -54,7 +54,6 @@
 
     #nav-close {
         z-index: 999;
-        display: block;
         position: fixed;
         top: 0;
         left: 0;
@@ -75,17 +74,44 @@
         background-color: #fff;
         text-align: left;
         padding: 15px 0 0 24px;
+        transform: translateX(-105%);
+        transition: 0.3s ease-in-out;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 25);
     }
 
     .nav-drawer__title {
+        display: block;
         font-size: 1.2rem;
         font-weight: 600;
         color: #fa6980;
         margin-bottom: 46px;
     }
+
+    #nav-drawer__link-top {
+        display: block;
+    }
+
+    #nav-content ul li {
+        margin-bottom: 36px;
+    }
+
+    #nav-content ul li a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    #nav-input:checked~#nav-close {
+        display: block;
+    }
+
+    #nav-input:checked~#nav-content {
+        transform: translateX(0%);
+    }
 }
 
-@media (min-width:480px) {
+@media (min-width: 480px) {
     .header {
         max-width: 1040px;
         margin: 0 auto;
@@ -119,9 +145,10 @@
 
 .main {
     background-color: #f6f8f9;
+    padding-bottom: 60px;
 }
 
-@media (min-width:1040px) {
+@media (min-width: 1040px) {
     main {
         padding-bottom: 120px;
     }
@@ -160,7 +187,7 @@
     margin: 0 24px;
 }
 
-@media (min-width:480px) {
+@media (min-width: 480px) {
     .section-top__image {
         height: 600px;
         margin-bottom: 80px;
@@ -176,7 +203,7 @@
     }
 
     .section-top__image-message {
-        font-size: 2.0rem;
+        font-size: 2rem;
         position: static;
         max-width: 1040px;
         margin: 0 auto;
@@ -187,7 +214,7 @@
     .section-top__lead {
         font-size: 2.4rem;
         font-weight: 600;
-        line-height: 4.0rem;
+        line-height: 4rem;
     }
 }
 
@@ -233,7 +260,7 @@
     font-size: 1.2rem;
 }
 
-@media (min-width:1040px) {
+@media (min-width: 1040px) {
     .section-menu ul {
         max-width: 1040px;
         padding: 0;
@@ -281,7 +308,7 @@
     border: solid 1px #333;
 }
 
-@media (min-width:1040px) {
+@media (min-width: 1040px) {
     .section-access {
         padding: 60px 36px;
         margin: 0 auto 60px;
@@ -313,7 +340,7 @@
 
 .section-news {
     background-color: #fff;
-    padding: 40px 24px 0;
+    padding: 40px 24px;
 }
 
 .section-news h2 {
@@ -343,7 +370,7 @@
     display: inline;
 }
 
-@media (min-width:1040px) {
+@media (min-width: 1040px) {
     .section-news {
         padding: 60px 36px 20px;
         max-width: 1040px;
@@ -405,7 +432,7 @@
     color: #fff;
 }
 
-@media (min-width:1040px) {
+@media (min-width: 1040px) {
     .footer {
         margin: 0;
         padding: 0;
