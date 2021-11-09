@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#top {
+    background-image: url(../images/top.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}

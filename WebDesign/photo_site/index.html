@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="bg">
+    <div id="top">
       <header class="header">
         <input type="checkbox" id="nav-input" />
         <label for="nav-input" id="nav-open"><span></span></label>
@@ -48,7 +48,87 @@
           alt="My Photo"
           class="section-profile_img"
         />
+        <p>
+          1999年生まれ。北海道出身。
+          現在は大学3年生で、インフラ系やクラウドアプリの勉強をしている。
+          大学3年生からWebデザインに興味を持ち
+          デジハリのオンラインスクールを受講する。
+        </p>
+      </section>
+      <section class="section-photo">
+        <h2 id="photos">My Photos</h2>
+        <div>
+          <img src="images/pancake1.jpg" alt="pancake" class="sample" />
+          <h2>Puncake</h2>
+          <a href="#" class="gradient">view photos</a>
+        </div>
+        <div>
+          <img src="images/food1.jpg" alt="food" class="sample" />
+          <h2>Food</h2>
+          <a href="#" class="gradient">view photos</a>
+        </div>
+        <div>
+          <img src="images/landscape1.jpg" alt="landscape" class="sample" />
+          <h2>Landscape</h2>
+          <a href="#" class="gradient">view photos</a>
+        </div>
+      </section>
+      <section class="section-topic">
+        <ul>
+          <li>
+            <time datetime="2021-11-06">2021.11.6</time>
+            <p>Webサイト課題作成開始。</p>
+          </li>
+          <li>
+            <time datetime="2021-10-28">2021.10.28</time>
+            <p>研究室内でサーバーを建てる。</p>
+          </li>
+          <li>
+            <time datetime="2021-9-29">2021.9.29</time>
+            <p>ゼミでの活動開始。L1、L2スイッチの実験。</p>
+          </li>
+        </ul>
+      </section>
+      <section class="section-address">
+        <h2 id="address">My Address</h2>
+        <div class="address-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12962.984101121021!2d140.0146145337265!3d35.6832551330993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022802950c2c953%3A0x68a444e744ad72f4!2z44CSMjc1LTAwMTYg5Y2D6JGJ55yM57-S5b-X6YeO5biC5rSl55Sw5rK8!5e0!3m2!1sja!2sjp!4v1636457361301!5m2!1sja!2sjp"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div class="address-box">
+          <p>
+            千葉県習志野市津田沼x丁目xxビル TEL: 0120-xxx-xxxx Mail:
+            xxx@xxxxx.com
+          </p>
+        </div>
       </section>
     </main>
+    <footer class="footer">
+      <nav class="site-map">
+        <ul>
+          <li><a href="#top">Top</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#topics">Topics</a></li>
+        </ul>
+      </nav>
+      <div class="sns-link">
+        <ul>
+          <li>
+            <img src="images/twitter.png" alt="twitter icon" />
+          </li>
+          <li>
+            <img src="images/instagram.png" alt="instagram icon" />
+          </li>
+          <li>
+            <img src="images/facebook.png" alt="facebook icon" />
+          </li>
+        </ul>
+      </div>
+      <small>&copy; makobox</small>
+    </footer>
   </body>
 </html>
