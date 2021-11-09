@@ -25,20 +25,27 @@
   <body>
     <div id="top">
       <header class="header">
-        <input type="checkbox" id="nav-input" />
-        <label for="nav-input" id="nav-open"><span></span></label>
-        <label for="nav-input" id="nav-close"></label>
-        <nav id="nav-content" class="header_navigation">
-          <ul>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#photos">Photos</a></li>
-            <li><a href="#topics">Topics</a></li>
-            <li><a href="#address">Address</a></li>
-          </ul>
-        </nav>
+        <div class="nav-drawer">
+          <input type="checkbox" id="nav-input" />
+          <label for="nav-input" id="nav-open"><span></span></label>
+          <label for="nav-input" id="nav-close"></label>
+          <nav id="nav-content" class="header_navigation">
+            <ul>
+              <li><a href="#profile">Profile</a></li>
+              <li><a href="#photos">Photos</a></li>
+              <li><a href="#topics">Topics</a></li>
+              <li><a href="#address">Address</a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
-      <h1 class="name">Makoto Taguchi</h1>
-      <p>MY PHOTO ALBUM</p>
+      <div class="title">
+        <h1>
+          Makoto <br />
+          Taguchi
+        </h1>
+        <p>MY PHOTO ALBUM</p>
+      </div>
     </div>
     <main>
       <section class="section-profile">
