@@ -89,12 +89,12 @@
         left: 0;
         top: 0;
         z-index: 9999;
-        width: 70%;
+        width: 15%;
         height: 100%;
         background-color: #fff;
-        text-align-last: left;
+        text-align: left;
         padding: 15px 0 0 24px;
-        transform: translateX(-105%);
+        transform: translateX(-120%);
         transition: 0.3s ease-in-out;
         box-shadow: 5px 0 25px rgba(0, 0, 0, 25);
     }
