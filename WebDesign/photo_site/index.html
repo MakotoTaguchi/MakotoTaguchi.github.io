@@ -23,13 +23,17 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="top">
+    <div id="top" class="top">
       <header class="header">
-        <div class="nav-drawer">
-          <input type="checkbox" id="nav-input" />
+        <div id="nav-drawer">
+          <input type="checkbox" class="none" id="nav-input" />
           <label for="nav-input" id="nav-open"><span></span></label>
-          <label for="nav-input" id="nav-close"></label>
+          <label for="nav-input" class="none" id="nav-close"></label>
           <nav id="nav-content" class="header_navigation">
+            <div class="nav-drawer__title none">
+              Makoto <br />
+              Taguchi
+            </div>
             <ul>
               <li><a href="#profile">Profile</a></li>
               <li><a href="#photos">Photos</a></li>
@@ -40,10 +44,7 @@
         </div>
       </header>
       <div class="title">
-        <h1>
-          Makoto <br />
-          Taguchi
-        </h1>
+        <h1>Makoto Taguchi</h1>
         <p>MY PHOTO ALBUM</p>
       </div>
     </div>
@@ -80,7 +81,7 @@
           <a href="#" class="gradient">view photos</a>
         </div>
       </section>
-      <section class="section-topic">
+      <section id="topics" class="section-topic">
         <ul>
           <li>
             <time datetime="2021-11-06">2021.11.6</time>

@@ -1,27 +1,148 @@
 @charset "utf-8";
 
-#top {
+/* -------------------------- top ------------------------------ */
+
+.top {
     background-image: url(../images/top.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
     min-height: 100vh;
-    font-size: 2.5rem;
     color: #faf6f9;
+    position: relative;
 }
 
-.nav-drawer {
+.header__navigation {
     display: none;
 }
 
 .title {
     position: absolute;
     top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .title h1 {
     font-family: 'La Belle Aurore', cursive;
-    font-size: 5.0rem;
+    font-size: 6.0rem;
+    font-weight: normal;
+    line-height: 1;
+    letter-spacing: 0.05em;
 }
 
-@media (max-width:768px) {}
+.title p {
+    margin-top: 30px;
+    font-size: 2.4rem;
+}
+
+/* ハンバーガーメニュー */
+@media (max-width:480px) {
+
+    #nav-drawer {
+        position: relative;
+        text-align: right;
+        padding: 10px 24px 0 0;
+    }
+
+    #nav-open {
+        display: inline-block;
+        width: 25px;
+        height: 22px;
+    }
+
+    #nav-open span,
+    #nav-open span::before,
+    #nav-open span::after {
+        position: absolute;
+        height: 3px;
+        width: 30px;
+        background-color: #faf6f9;
+        display: block;
+        content: "";
+    }
+
+    #nav-open span::before {
+        bottom: -10px;
+    }
+
+    #nav-open span::after {
+        bottom: -20px;
+    }
+
+    #nav-close {
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+    }
+
+    #nav-content {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+        width: 70%;
+        height: 100%;
+        background-color: #fff;
+        text-align-last: left;
+        padding: 15px 0 0 24px;
+        transform: translateX(-105%);
+        transition: 0.3s ease-in-out;
+        box-shadow: 5px 0 25px rgba(0, 0, 0, 25);
+    }
+
+    .nav-drawer__title {
+        font-family: 'La Belle Aurore', cursive;
+        display: block;
+        color: #333;
+        margin-bottom: 46px;
+        font-size: 4.0rem;
+        font-weight: normal;
+        line-height: 1;
+        letter-spacing: 0.05em;
+    }
+
+    #nav-content ul li {
+        margin-bottom: 36px;
+    }
+
+    #nav-content ul li a {
+        text-decoration: none;
+        font-size: 2.4rem;
+        font-weight: normal;
+        color: #333;
+    }
+
+    #nav-input:checked~#nav-close {
+        display: block;
+    }
+
+    #nav-input:checked~#nav-content {
+        transform: translateX(0%)
+    }
+}
+
+/* -------------------------- main ------------------------------ */
+
+main {
+    background-color: #faf6f9;
+}
+
+.section-profile {
+    padding: 30px 10px 0 10px;
+}
+
+.section-profile img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-top: 30px;
+}
