@@ -136,13 +136,55 @@ main {
     background-color: #faf6f9;
 }
 
-.section-profile {
-    padding: 30px 10px 0 10px;
-}
+/* ------ section-profile ------ */
 
 .section-profile img {
     width: 100%;
     max-width: 100%;
     height: auto;
     margin-top: 30px;
+}
+
+.section-profile p {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 10px 15px 10px;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+/* ------ section-photo ------ */
+
+.section-photo img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+.sample-photo {
+    position: relative;
+    text-align: center;
+}
+
+.sample-photo h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+    color: #faf6f9;
+    font-size: 4.0rem;
+    font-family: 'La Belle Aurore', cursive;
+    font-weight: normal;
+}
+
+/* ボタン */
+.gradient {
+    display: inline-block;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px 60px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin: 30px auto;
 }
