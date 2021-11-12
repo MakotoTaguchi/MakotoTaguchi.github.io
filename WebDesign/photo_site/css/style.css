@@ -218,6 +218,16 @@ main {
     -webkit-overflow-scrolling: touch;
 }
 
+.gallary.panelactive img {
+    width: 90%;
+    height: auto;
+}
+
+.gallary.panelactive p {
+    font-size: 2.0rem;
+    color: #faf6f9;
+}
+
 /* closeボタン */
 .closebtn {
     position: fixed;
