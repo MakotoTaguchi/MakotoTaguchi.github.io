@@ -1,9 +1,17 @@
-$(".btn").click(function () {
-    $(this).toggleClass('active');
-    $(".gallary").toggleClass('panelactive');
+$("#btn1").click(function () {
+    $("#gallary1").toggleClass('panelactive');
+});
+
+$("#btn2").click(function () {
+    $("#gallary2").toggleClass('panelactive');
+});
+
+$("#btn3").click(function () {
+    $("#gallary3").toggleClass('panelactive');
 });
 
 $(".closebtn").click(function () {
-    $(".btn").removeClass('active');
-    $(".gallary").removeClass('panelactive');
-})
+    $("#gallary1").removeClass('panelactive');
+    $("#gallary2").removeClass('panelactive');
+    $("#gallary3").removeClass('panelactive');
+});

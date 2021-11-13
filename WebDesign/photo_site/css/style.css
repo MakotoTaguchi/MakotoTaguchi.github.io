@@ -191,8 +191,19 @@ main {
 
 /* ボタンが押された時のアクション */
 
-.gallary {
+#gallary1.panelactive {
     display: block;
+}
+
+#gallary2.panelactive {
+    display: block;
+}
+
+#gallary3.panelactive {
+    display: block;
+}
+
+.gallary {
     position: fixed;
     z-index: -1;
     top: 0;
@@ -204,12 +215,12 @@ main {
     left: 0;
 }
 
-.gallary.panelactive {
+.gallary {
     opacity: 1;
     z-index: 999;
 }
 
-.gallary.panelactive .img-list {
+.gallary .img-list {
     position: fixed;
     z-index: -999;
     width: 100%;
@@ -218,12 +229,12 @@ main {
     -webkit-overflow-scrolling: touch;
 }
 
-.gallary.panelactive img {
+.gallary img {
     width: 90%;
     height: auto;
 }
 
-.gallary.panelactive p {
+.gallary p {
     font-size: 2.0rem;
     color: #faf6f9;
 }
@@ -261,3 +272,26 @@ main {
     transform: translateY(-6px) rotate(45deg);
     width: 50%;
 }
+
+/* ------ section-topic ------ */
+
+.section-topic ul {
+    margin-top: 30px;
+    list-style: none;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    border: solid 1px #333;
+    padding-left: 10px;
+}
+
+.section-topic ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 90%;
+    border-bottom: 1px solid #333;
+}
+
+.section-topic ul li:last-child {
+    border-bottom: 0px;
+}
+
+/* ------ section-address ------ */
