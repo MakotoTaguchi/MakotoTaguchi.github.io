@@ -12,10 +12,6 @@
     position: relative;
 }
 
-.header__navigation {
-    display: none;
-}
-
 .title {
     position: absolute;
     top: 50%;
@@ -130,10 +126,32 @@
     }
 }
 
+@media (min-width:480px) {
+    .header_navigation ul {
+        display: block;
+        text-align: right;
+        padding: 20px 20px;
+    }
+
+    .header_navigation ul li {
+        display: inline-block;
+        margin-right: 20px;
+        font-size: 2.0rem;
+    }
+
+    .header_navigation ul li a {
+        text-decoration: none;
+        color: #faf6f9;
+    }
+}
+
 /* -------------------------- main ------------------------------ */
 
-main {
-    background-color: #faf6f9;
+@media (min-width:480px) {
+    main {
+        text-align: center;
+        margin: 0 100px 0 100px;
+    }
 }
 
 /* ------ section-profile ------ */
@@ -146,9 +164,38 @@ main {
 }
 
 .section-profile p {
-    background: rgba(255, 255, 255, 0.8);
+    /* background: rgba(255, 255, 255, 0.8); */
+    font-weight: 500;
     padding: 15px 10px 15px 10px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+@media (min-width:768px) {
+    .section-profile h2 {
+        padding-bottom: 60px;
+    }
+
+    .profile-block {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section-profile img {
+        width: 30%;
+        object-fit: cover;
+        height: auto;
+        margin: 0 auto;
+        margin-top: 0;
+    }
+
+    .section-profile p {
+        font-size: 1.6rem;
+        margin: auto auto;
+        width: 30%;
+        line-height: 50px;
+        background-color: #fff;
+
+    }
 }
 
 /* ------ section-photo ------ */
@@ -243,6 +290,14 @@ main {
     padding-bottom: 30px;
 }
 
+@media (min-width:768px) {
+    .gallary img {
+        width: 100%;
+        max-width: 700px;
+        height: auto;
+    }
+}
+
 /* closeボタン */
 .closebtn {
     position: fixed;
@@ -299,6 +354,20 @@ main {
     border-bottom: 0px;
 }
 
+@media (min-width:768px) {
+    .section-topic ul {
+        padding-left: 0;
+    }
+
+    .section-topic ul li {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 0 auto;
+        max-width: 70%;
+        border-bottom: 1px solid #333;
+    }
+}
+
 /* ------ section-address ------ */
 .address-map {
     padding-top: 30px;
@@ -310,6 +379,57 @@ main {
 }
 
 .address-box {
-    padding-top: 10px;
+    padding-top: 20px;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+/* ------ footer ------ */
+.footer {
+    max-height: 160px;
+    background-color: #666;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.site-map {
+    padding-top: 30px;
+}
+
+.site-map li {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 1.8rem;
+}
+
+.site-map li a {
+    text-decoration: none;
+    color: #faf6f9;
+}
+
+.site-map li a:visited {
+    color: #faf6f9;
+}
+
+.sns-link {
+    margin-top: 30px;
+}
+
+.sns-link li {
+    display: inline-block;
+    width: 20px;
+    margin: 0 10px;
+}
+
+.sns-link li img {
+    width: 100%;
+}
+
+.footer small {
+    font-size: 1.7rem;
+    color: #faf6f9;
+    display: inline-block;
+    padding-top: 30px;
 }
