@@ -70,12 +70,10 @@
               src="images/top/thumbnail_runner.jpg"
               alt="DHW スポーツ用品事業"
             />
-            <h3>
-              <a class="section-services__title" href=""
-                >DHW スポーツ用品事業</a
-              >
-            </h3>
-            <p>
+            <a class="section-services__title" href=""
+              ><h3>DHW スポーツ用品事業</h3>
+            </a>
+            <p class="section-services__description">
               DHW Dash
               を中心に、最新のテクノロジーを駆使してアスリートの能力を最大限に引き出すスポーツ用品を開発しています。
             </p>
@@ -88,10 +86,11 @@
             />
             <h3>
               <a class="section-services__title" href=""
-                >サプリメント事業（外部サイトへ）</a
+                ><h3>サプリメント事業</h3>
+                （外部サイトへ）</a
               >
             </h3>
-            <p>
+            <p class="section-services__description">
               アスリート支援で培った栄養医学の知見を元に、サプリメントの開発、販売を行なっています。詳しくは、公式サイトを御覧ください。
             </p>
           </li>
@@ -103,36 +102,42 @@
             />
             <h3>
               <a class="section-services__title" href="">
-                SDGsへの取り組み（外部サイトへ）</a
+                <h3>SDGsへの取り組み</h3>
+                （外部サイトへ）</a
               >
             </h3>
-            <p>
+            <p class="section-services__description">
               DHW Company
               では、社会の一員としてSDGsへの取り組みが大切であると考えています。詳しい取り組みは、特設サイトを御覧ください。
             </p>
           </li>
         </ul>
         <div>
-          <video src="videos/dhw_company_movie.mp4" controls></video>
+          <video
+            class="section-services__video"
+            src="videos/dhw_company_movie.mp4"
+            controls
+          ></video>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <nav>
-        <ul>
-          <li><a href="">会社概要</a></li>
-          <li><a href="">サービス</a></li>
-          <li><a href="">ニュースリリース</a></li>
-          <li><a href="">お問い合わせ</a></li>
-        </ul>
-        <ul>
-          <li><a href="">DHW スポーツ用品事業</a></li>
-          <li><a href="">サプリメント事業</a></li>
-          <li><a href="">SDGsへの取り組み</a></li>
-        </ul>
-      </nav>
+      <div class="footer-content-wrapper">
+        <nav class="site-map">
+          <ul class="site-map__main-links">
+            <li><a href="">会社概要</a></li>
+            <li><a href="">サービス</a></li>
+            <li><a href="">ニュースリリース</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+          <ul class="site-map__service-links">
+            <li><a href="">DHW スポーツ用品事業</a></li>
+            <li><a href="">サプリメント事業</a></li>
+            <li><a href="">SDGsへの取り組み</a></li>
+          </ul>
+        </nav>
+        <small class="footer__copyright">Copyright 20xx DHW Company Inc.</small>
+      </div>
     </footer>
-
-    <!-- ■ コピーライト Copyright 20xx DHW Company Inc. -->
   </body>
 </html>
