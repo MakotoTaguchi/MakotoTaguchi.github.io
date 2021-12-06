@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+    /* 16px * 62.5% = 10px */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    /* RGB */
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-weight: normal;
+    font-size: 1.6em;
+    line-height: 2.4rem;
+    text-align: left;
+    background-color: #faf6f9;
+}
+
+.video-erea video {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    /* width: 177.77777778vh;
+    height: 56.25vw; */
+    /* min-height: 100%; */
+    position: relative;
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+    filter: grayscale(60%);
+    opacity: 0.8;
+}
+
+.header {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* margin: 0 auto; */
+    top: 0;
+    /* padding: 0 4%; */
+}
+
+.header img {
+    width: 150px;
+    /* margin-top: 5px; */
+    margin-left: 150px;
+}
+
+.header nav ul {
+    position: absolute;
+    display: flex;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-top: 36px;
+    right: 0;
+    margin-right: 120px;
+}
+
+.header nav ul li {
+    margin-right: 30px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.header nav ul li a:hover {
+    color: red;
+}
+
+.bg-img {
+    height: 270px;
+    background-image: url(../images/mise2.jpg);
+    background-repeat: no-repeat;
+    background-position-y: -610px;
+}
+
+.top-title {
+    text-align: center;
+    font-size: 5.0rem;
+    color: #000;
+    text-transform: uppercase;
+    padding-top: 135px;
+}
+
+/* -------- footer ----------- */
+
+.footer {
+    background-color: #666;
+    margin-top: 80px;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+small {
+    color: #faf6f9;
+}

@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+.main {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.main img {
+    width: 55%;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+.main p {
+    font-size: 2.4rem;
+    line-height: 1.5;
+}
+
+.main p span {
+    font-weight: 600;
+}
