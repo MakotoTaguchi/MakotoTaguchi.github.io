@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    var target = 'http://localhost:4000';
+    var target = 'http://localhost:80';
 
     document.getElementById('btn').addEventListener('click', function () {
         document.getElementById('frame').contentWindow.postMessage(
