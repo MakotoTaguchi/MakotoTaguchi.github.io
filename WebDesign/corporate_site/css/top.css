@@ -55,6 +55,11 @@
   color: #72acff;
 }
 
+.section-news ol li a {
+  color: #72acff;
+  text-decoration: none;
+}
+
 .section-news ol li:first-child {
   display: block;
 }
