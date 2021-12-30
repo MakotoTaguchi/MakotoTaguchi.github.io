@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.section-top h2 {
+    margin-bottom: 14px;
+    font-size: 1.8rem;
+}
+
+.section-top__news-time,
+.section-top__news-category {
+    color: #fff;
+}
