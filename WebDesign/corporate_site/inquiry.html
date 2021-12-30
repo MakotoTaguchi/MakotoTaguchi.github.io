@@ -45,16 +45,16 @@
                 </div>
             </div>
         </section>
-        <form action="inquiry.html">
+        <form class="inquiry-form" action="inquiry.html">
             <p>
                 <label for="form_name">お名前</label>
                 <input type="text" id="form_name" placeholder="入力して下さい。">
             </p>
             <p>
                 <label for="">ご連絡について</label>
-                <input id="form_reply_method_1" type="radio" name="form_reply_method"><label
-                    for="form_reply_method_1">電話で折り返してほしい</label>
-                <input id="form_reply_method_2" type="radio" name="form_reply_method"><label
+                <input id="form_reply_method_1" type="radio" name="form_reply_method"><label class="small-label"
+                    for="form_reply_method_1">電話で折り返してほしい</label> <br>
+                <input id="form_reply_method_2" type="radio" name="form_reply_method"><label class="small-label"
                     for="form_reply_method_2">メールで折り返してほしい</label>
             </p>
             <p>
@@ -71,13 +71,13 @@
             </p>
             <p>
                 <label for="form_inquiry_detail">お問い合わせ詳細</label>
-                <textarea id="form_inquiry_detail"></textarea>
+                <textarea id="form_inquiry_detail" placeholder="入力して下さい。"></textarea>
             </p>
             <p>
                 <input type="checkbox" id="form_privacy">
-                <label for="form_privacy"><a href="">プライバシーポリシー</a>に同意</label>
+                <label class="small-label" for="form_privacy"><a href="">プライバシーポリシー</a>に同意</label>
             </p>
-            <input type="submit" value="確認する">
+            <input class="inquiry-form__submit" type="submit" value="確認する">
         </form>
     </main>
     <footer class="footer">
