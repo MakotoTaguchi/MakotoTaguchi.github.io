@@ -101,6 +101,12 @@
     .inquiry-form p label {
         display: inline-block;
         width: 260px;
+        vertical-align: top;
+        font-weight: 600;
+    }
+
+    .inquiry-form__contact-method {
+        display: inline-block;
     }
 
     .inquiry-form input[type="text"],
@@ -109,5 +115,18 @@
     .inquiry-form textarea {
         display: inline-block;
         width: 400px;
+    }
+
+    .inquiry-form textarea {
+        width: 600px;
+        height: 450px;
+    }
+
+    .inquiry-form__privacy {
+        margin-left: 260px;
+    }
+
+    .inquiry-form__submit {
+        margin: 0 auto;
     }
 }
