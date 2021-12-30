@@ -23,3 +23,42 @@
     font-size: 2.0rem;
     color: #fff;
 }
+
+.news-container {
+    padding: 40px 24px 90px;
+    text-align: left;
+}
+
+.news-list {
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.news-list li {
+    margin-bottom: 10px;
+}
+
+.news-list h3 {
+    font-weight: 300;
+}
+
+.news-list__category {
+    background-color: #777;
+    width: 150px;
+    height: 24px;
+    padding-left: 8px;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+.news-list__category.press {
+    background-color: #004280;
+}
+
+.news-list__category.info {
+    background-color: #2987b0;
+}
+
+.news-list__news-body {
+    display: none;
+}
