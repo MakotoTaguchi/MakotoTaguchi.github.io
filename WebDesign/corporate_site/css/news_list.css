@@ -153,6 +153,24 @@
     }
 
     .pagenation__list li:first-child {
-        border-left: solid 2px #333;
+        margin-right: 20px;
+        border: solid 2px #333;
+    }
+
+    .pagenation__list li:nth-child(2) {
+        border: solid 2px #333;
+    }
+
+    .pagenation__list li:last-child {
+        margin-left: 20px;
+        border: solid 2px #333;
+    }
+
+    .pagenation__list li a {
+        padding: 18px;
+        max-width: none;
+        max-height: none;
+        font-size: 3.0rem;
+        font-weight: 600;
     }
 }
