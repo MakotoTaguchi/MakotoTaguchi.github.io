@@ -47,6 +47,11 @@ a:hover {
   font-size: 1.6rem;
 }
 
+.header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
 /* navigation */
 .open-button,
 .close-button {
