@@ -24,6 +24,20 @@
     font-size: 2.0rem;
 }
 
+@media (min-width:960px) {
+    .section-top__image {
+        height: 600px;
+    }
+
+    .section-top__image-filter {
+        padding-top: 210px;
+    }
+
+    .section-top h2 {
+        font-size: 4.0rem;
+    }
+}
+
 .inquiry-form {
     padding: 50px 24px 60px;
     text-align: left;
@@ -62,12 +76,38 @@
     padding-left: 30px;
 }
 
+.inquiry-form__privacy-link {
+    color: #333;
+}
+
 .inquiry-form__submit {
     display: block;
     height: 48px;
     background-color: #004bb1;
     color: #fff;
     font-size: 2.4rem;
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
     border-radius: 48px;
+}
+
+@media (min-width:960px) {
+    .inquiry-form {
+        padding: 120px 24px;
+        max-width: 1160px;
+        margin: 0 auto;
+    }
+
+    .inquiry-form p label {
+        display: inline-block;
+        width: 260px;
+    }
+
+    .inquiry-form input[type="text"],
+    .inquiry-form input[type="email"],
+    .inquiry-form select,
+    .inquiry-form textarea {
+        display: inline-block;
+        width: 400px;
+    }
 }
