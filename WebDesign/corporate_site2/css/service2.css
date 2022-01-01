@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.section-top {
+/* .section-top {
     color: #fff;
     padding: 40px 24px 10px 24px;
     background-color: #000;
@@ -111,15 +111,17 @@
         font-size: 2.4rem;
         line-height: 3.6rem;
     }
-}
+} */
 
 .section-shop {
-    background-color: #292929;
-    color: #fff;
+    background-color: #fff;
+    color: #333;
     padding: 60px 24px;
 }
 
 .section-shop h2 {
+    font-size: 3.0rem;
+    font-weight: 500;
     margin-bottom: 60px;
 }
 
@@ -149,12 +151,13 @@
 
 .section-shop__item-list h3 {
     font-size: 2.4rem;
+    font-weight: 500;
     margin-bottom: 24px;
 }
 
 .section-shop__item-list a {
     text-decoration: none;
-    color: #fff;
+    color: #333;
 }
 
 @media (min-width:1160px) {
