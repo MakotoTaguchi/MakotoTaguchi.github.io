@@ -116,7 +116,7 @@
 .section-shop {
     background-color: #fff;
     color: #333;
-    padding: 60px 24px;
+    padding: 60px 24px 0;
 }
 
 .section-shop h2 {
@@ -169,4 +169,31 @@
     .section-shop h2 {
         font-size: 4.0rem;
     }
+}
+
+.section-video video {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.section-shoes__img {
+    width: 100%;
+}
+
+.section-shoes {
+    margin-bottom: 40px;
+}
+
+.section-shoes__description {
+    margin-top: 40px;
+}
+
+.section-shoes__description h2 {
+    font-size: 3.0rem;
+    font-weight: 500;
+    padding-bottom: 22px;
+}
+
+.section-shoes__description p {
+    line-height: 5.5rem;
 }
