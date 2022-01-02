@@ -165,7 +165,7 @@
         font-size: 4.0rem;
     }
 
-    /* .section-shoes__description p {
-        font-size: 2.0rem;
-    } */
+    .br {
+        display: none;
+    }
 }
