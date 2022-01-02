@@ -55,7 +55,7 @@
     }
 }
 
-.section-video video {
+.video-area video {
     margin-bottom: 60px;
     width: 100%;
 }
@@ -65,7 +65,7 @@
 }
 
 @media (min-width:1160px) {
-    .section-video video {
+    .video-area video {
         max-width: 1160px;
         height: 500px;
     }
