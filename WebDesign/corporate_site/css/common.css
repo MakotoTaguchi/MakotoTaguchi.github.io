@@ -229,3 +229,12 @@ a:hover {
     font-weight: 400;
   }
 }
+
+#scroll-top {
+  background-color: #eee;
+  opacity: 0.6;
+  bottom: 20px;
+  padding: 10px;
+  position: fixed;
+  right: 20px;
+}
