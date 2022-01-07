@@ -14,7 +14,7 @@ $(function () {
     });
 
     topBtn.on("click", function (event) {
-        console.log(event);
+        // console.log(event);
         event.preventDefault();
         $('body,html').animate({
             scrollTop: 0
