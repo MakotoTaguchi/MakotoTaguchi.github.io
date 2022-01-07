@@ -20,4 +20,16 @@ $(function () {
             scrollTop: 0
         }, 500);
     });
+
+    $('.close-button, .open-button').on("click", function () {
+        $('.header nav').slideToggle();
+    });
+
+    // $('.close-button').on("click", function () {
+    //     $('.header nav').slideUp();
+    // });
+
+    // $('.open-button').on("click", function () {
+    //     $('.header nav').slideDown();
+    // });
 })
