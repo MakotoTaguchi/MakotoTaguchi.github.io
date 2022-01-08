@@ -3,3 +3,4 @@
 
 ## 作ったサイト
 1.デジハリの授業で作ったカフェサイト（模写）--> https://makototaguchi.github.io/WebDesign/cafe_site/assets/
+2.デジハリの授業で作ったコーポレートサイト（模写）--> https://makototaguchi.github.io/WebDesign/corporate_site/
