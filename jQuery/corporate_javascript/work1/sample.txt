@@ -1,0 +1,63 @@
+//*************************************
+// HTML追加：フッターの下
+//*************************************
+<p id="scroll-top"><a href="#">^</a></p>
+
+
+//*************************************
+// JS読み込み
+//*************************************
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script> 
+<script src="assets/js/common.js"></script>
+
+
+
+//*************************************
+// CSS: common.css
+//*************************************
+/* return to top */
+#scroll-top {
+  background-color: #eee;
+  opacity: 0.6;
+  bottom: 20px;
+  padding: 10px;
+  position: fixed;
+  right: 20px;
+}
+#scroll-top a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+
+
+//*************************************
+// JS: common.js
+//*************************************
+/*** 上に戻るボタン ***/
+let topBtn = $('#scroll-top');
+topBtn.hide();
+
+// ある程度スクロールされたら、上に戻るボタンを表示する
+$(window).scroll(function () {
+console.log($(this).scrollTop());
+console.log($(this).height());
+
+if ($(this).scrollTop() > 1000) {
+		topBtn.fadeIn(); // フェードインで表示
+	} else {
+		topBtn.fadeOut(); // フェードアウトで非表示
+	}
+});
+
+topBtn.on("click",function(event) {
+	event.preventDefault();  // ページ内リンクの挙動をキャンセル
+	$('body,html').animate({ // スムーズにスクロールする設定
+			scrollTop: 0
+	}, 500);
+});
+

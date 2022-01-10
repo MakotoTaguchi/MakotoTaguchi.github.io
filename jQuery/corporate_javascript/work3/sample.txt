@@ -1,0 +1,22 @@
+//*************************************
+// CSS読み込み
+//*************************************
+<link rel="stylesheet" href="assets/slick/slick.css">
+<link rel="stylesheet" href="assets/slick/slick-theme.css">
+
+//*************************************
+// JS読み込み
+//*************************************
+<script src="assets/slick/slick.min.js"></script> 
+
+
+//*************************************
+// JS: common.js
+//*************************************
+    //https://kenwheeler.github.io/slick/
+    $('#slick-slide').slick({
+        autoplay: true,
+        autoplaySpeed: 300,
+        dots: true,
+        arrows: false
+    });

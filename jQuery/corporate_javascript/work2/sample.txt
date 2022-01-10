@@ -1,0 +1,15 @@
+//*************************************
+// JS: common.js
+//*************************************
+
+		//$('.close-button, .open-button').on("click",function () {
+		//    $('.header nav').slideToggle();
+		//});
+
+		//Sample
+		$('.close-button').on("click", function () {
+				$('.header nav').slideUp();
+		});
+		$('.open-button').on("click", function () {
+				$('.header nav').slideDown();
+		});
