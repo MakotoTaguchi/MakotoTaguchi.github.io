@@ -32,4 +32,11 @@ $(function () {
     // $('.open-button').on("click", function () {
     //     $('.header nav').slideDown();
     // });
+
+    // $('#slick-slide').slick({
+    //     autoplay: true,
+    //     autoplaySpeed: 2000,
+    //     dots: true,
+    //     arrows: false
+    // });
 })
