@@ -1,3 +1,21 @@
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+    /* 16px * 62.5% = 10px */
+    width: 100%;
+    box-sizing: border-box;
+}
+
 body {
     background-image: url(../img/washi.png);
+    background-size: 48px 48px;
+}
+
+.sns-link li {
+    display: inline-block;
+}
+
+.sns-link li a img {
+    width: 20px;
 }
