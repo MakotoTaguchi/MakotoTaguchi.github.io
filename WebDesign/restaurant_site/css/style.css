@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* common */
 html {
     font-size: 62.5%;
     /* 16px * 62.5% = 10px */
@@ -12,6 +13,8 @@ body {
     background-size: 48px 48px;
     font-family: 'Noto Serif JP', serif;
 }
+
+/* container */
 
 .header-area {
     writing-mode: vertical-rl;
@@ -28,6 +31,8 @@ body {
 .sns-link li a img {
     width: 20px;
 }
+
+/* button */
 
 .openbtn {
     display: block;
@@ -89,6 +94,8 @@ body {
     width: 30%;
 }
 
+/* navigation */
+
 .main-nav {
     display: none;
 }
@@ -121,4 +128,32 @@ body {
 .main-nav dd a {
     text-decoration: none;
     color: #fff;
+}
+
+/* slider */
+
+.slider {
+    position: relative;
+    z-index: 1;
+    height: 90vh;
+}
+
+.slider-item01 {
+    background-image: url(../img/mise1.jpg);
+}
+
+.slider-item02 {
+    background-image: url(../img/menu1.jpg);
+}
+
+.slider-item03 {
+    background-image: url(../img/sake.jpg);
+}
+
+.slider-item {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
