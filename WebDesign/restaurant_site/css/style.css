@@ -227,3 +227,17 @@ body {
 .slick-dots .slick-active button {
     background: #333;
 }
+
+/* lead-area */
+
+.lead {
+    padding: 100px 0;
+}
+
+.lead h2 {
+    padding-bottom: 50px;
+    font-size: 2.4rem;
+    writing-mode: vertical-lr;
+    line-height: 1.8;
+    margin: 0 auto;
+}
