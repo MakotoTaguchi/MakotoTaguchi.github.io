@@ -89,6 +89,10 @@ body {
     width: 30%;
 }
 
+.main-nav {
+    display: none;
+}
+
 .g-nav-list li {
     padding: 15px;
 }
