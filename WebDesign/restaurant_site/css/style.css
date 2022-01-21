@@ -17,22 +17,37 @@ body {
 /* container */
 
 .header {
+    position: absolute;
     display: flex;
     justify-content: center;
-}
-
-.header .sns-link {
-    position: absolute;
+    z-index: 2;
+    background: none;
+    height: 90vh;
+    align-items: center;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
 }
 
 .header-area {
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
+    background-color: #3e2058;
+    color: #fff;
+    padding: 20px;
 }
 
 .header-area h1 {
     font-size: 3.6rem;
-    color: #fff;
-    background-color: #3e2058;
+}
+
+.header-area p {
+    font-size: 1.6rem;
+    writing-mode: vertical-rl;
+}
+
+.sns-link {
+    position: absolute;
 }
 
 .sns-link li {
@@ -194,4 +209,30 @@ body {
 .slick-next {
     right: 2.5%;
     transform: rotate(45deg);
+}
+
+.slick-dots {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin: -50px 0 0 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width: 8px;
+    height: 8px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.slick-dots .slick-active button {
+    background: #333;
 }
