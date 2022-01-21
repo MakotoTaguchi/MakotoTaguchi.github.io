@@ -16,12 +16,23 @@ body {
 
 /* container */
 
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.header .sns-link {
+    position: absolute;
+}
+
 .header-area {
     writing-mode: vertical-rl;
 }
 
 .header-area h1 {
     font-size: 3.6rem;
+    color: #fff;
+    background-color: #3e2058;
 }
 
 .sns-link li {
@@ -130,6 +141,10 @@ body {
     color: #fff;
 }
 
+.slider-area {
+    position: relative;
+}
+
 /* slider */
 
 .slider {
@@ -156,4 +171,27 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    z-index: 3;
+    top: 42%;
+    cursor: pointer;
+    outline: none;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    height: 25px;
+    width: 25px;
+}
+
+.slick-prev {
+    left: 2.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {
+    right: 2.5%;
+    transform: rotate(45deg);
 }
