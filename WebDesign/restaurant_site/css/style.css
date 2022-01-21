@@ -171,26 +171,12 @@ body {
     height: 90vh;
 }
 
-/* .slider-item01 {
-    background-image: url(../img/mise1.jpg);
-}
-
-.slider-item02 {
-    background-image: url(../img/menu1.jpg);
-}
-
-.slider-item03 {
-    background-image: url(../img/sake.jpg);
-} */
 
 .slider-item img {
     width: 100%;
     height: 90vh;
     object-position: center;
     object-fit: cover;
-    /* background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; */
 }
 
 .slick-prev,
