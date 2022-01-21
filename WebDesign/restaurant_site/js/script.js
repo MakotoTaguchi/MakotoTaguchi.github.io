@@ -16,6 +16,6 @@ $('.slider').slick({
     pauseOnDotsHover: false,
 });
 
-$('.slider').on('touchmove', function (event, slick, currentSlide, nextSlide) {
-    $('.slider').slick('slickPlay');
-});
+// $('.slider').on('touchmove', function (event, slick, currentSlide, nextSlide) {
+//     $('.slider').slick('slickPlay');
+// });
