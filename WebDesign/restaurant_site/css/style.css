@@ -168,7 +168,7 @@ body {
     height: 90vh;
 }
 
-.slider-item01 {
+/* .slider-item01 {
     background-image: url(../img/mise1.jpg);
 }
 
@@ -178,14 +178,16 @@ body {
 
 .slider-item03 {
     background-image: url(../img/sake.jpg);
-}
+} */
 
-.slider-item {
+.slider-item img {
     width: 100%;
     height: 100vh;
-    background-repeat: no-repeat;
+    object-position: center;
+    object-fit: cover;
+    /* background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .slick-prev,
