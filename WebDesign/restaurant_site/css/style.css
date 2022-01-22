@@ -17,17 +17,16 @@ body {
 /* container */
 
 .header {
+    width: 100%;
+    padding: 0;
     position: absolute;
-    display: flex;
-    justify-content: center;
     z-index: 2;
     background: none;
+    color: #fff;
     height: 90vh;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
 }
 
 .header-area {
@@ -35,10 +34,13 @@ body {
     background-color: #3e2058;
     color: #fff;
     padding: 20px;
+    width: auto;
+    height: auto;
 }
 
 .header-area h1 {
     font-size: 3.6rem;
+    color: #fff;
 }
 
 .header-area p {
@@ -48,7 +50,7 @@ body {
 
 .sns-link {
     position: absolute;
-    left: -120%;
+    left: 10px;
     bottom: 20px;
 }
 
