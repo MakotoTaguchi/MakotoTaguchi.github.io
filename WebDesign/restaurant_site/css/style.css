@@ -236,10 +236,22 @@ body {
     padding: 100px 0;
 }
 
-.lead h2 {
+.lead-heading h2 {
     padding-bottom: 50px;
     font-size: 2.4rem;
-    writing-mode: vertical-lr;
+    writing-mode: vertical-rl;
     line-height: 1.8;
     margin: 0 auto;
+    letter-spacing: 0.5rem;
+}
+
+.lead-description {
+    padding: 0 30px;
+}
+
+.lead-description p {
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    line-height: 3.2;
+    font-weight: 490;
 }
