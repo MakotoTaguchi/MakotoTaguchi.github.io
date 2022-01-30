@@ -12,6 +12,7 @@ body {
     background-image: url(../img/washi.png);
     background-size: 48px 48px;
     font-family: 'Noto Serif JP', serif;
+    color: #000;
 }
 
 /* container */
@@ -251,12 +252,21 @@ body {
 
 .lead-description p {
     margin-bottom: 30px;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 3.2;
     font-weight: 490;
 }
 
 /* lead-btn */
 .lead-btn .btnarrow {
+    border: 1px solid #000;
     display: block;
+    padding: 15px 20px;
+    width: 250px;
+    margin: 0 auto;
+    writing-mode: horizontal-tb;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6em;
+    color: #000;
 }
