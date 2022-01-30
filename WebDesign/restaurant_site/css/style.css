@@ -255,3 +255,8 @@ body {
     line-height: 3.2;
     font-weight: 490;
 }
+
+/* lead-btn */
+.lead-btn .btnarrow {
+    display: block;
+}
