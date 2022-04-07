@@ -1,261 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Nlab</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>中村研究室</title>
+    <meta name="description" content="中村研究室のホームページ">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--=============Google Font ===============-->
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush%7CNoto+Serif+JP&display=swap" rel="stylesheet">
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <!--自作のCSS-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/parts.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+</head>
+
+<body id="home">
+
+    <div id="splash">
+        <div id="splash-logo">
+            <div class="fadeUp">中村研究室</div>
+        </div>
+        <!--/splash-->
+    </div>
+    <div class="splashbg1"></div>
+    <div class="splashbg2"></div>
+    <!---画面遷移用-->
+
+    <div id="container">
+        <header id="header" class="DownMove">
+            <div class="openbtn"><span></span><span></span><span></span></div>
+            <nav id="g-nav">
+                <div id="g-nav-list">
+                    <ul class="nav05b">
+                        <li class="current"><a href="#home"><span>ホーム</span></a></li>
+                        <!-- <li><a href="#"><span>会社概要</span></a></li> -->
+                        <li><a href="#"><span>事業紹介</span></a></li>
+                        <li><a href="#"><span>求人情報</span></a></li>
+                        <li><a href="#"><span>お知らせ</span></a></li>
+                        <li><a href="#"><span>アクセス</span></a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">中村研究室</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Visual Communication, Web Application, Cloud, Network Science, Security</p>
-                        <!-- <a class="btn btn-primary btn-xl" href="#about">Find Out More</a> -->
-                    </div>
-                </div>
-            </div>
+            </nav>
+            <h1>中村研究室</h1>
+            <ul id="utility-navi">
+                <li><a href="#"><img src="img/map.svg" alt=""><span>アクセス</span></a></li>
+                <li><a href="#"><img src="img/contact.svg" alt=""><span>お問い合わせ</span></a></li>
+            </ul>
         </header>
-        <!-- About-->
-        <section class="page-section bg-primary" id="about">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
-                        <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
+
+        <div class="circle-bg"></div>
+
+        <main id="main-area">
+
+            <div id="lead">
+
+                <div id="slider-area">
+                    <div id="slider">
+                        <!--/slider-->
                     </div>
+                    <!--/slider-area-->
                 </div>
+
+                <h2 class="heading fadeRightTrigger">Concept</h2>
+                <p class="lead fadeRightTrigger">エンターテーメントから
+                    <span>新しい価値と分野の想像を</span></p>
+
+                <article id="news" class="fadeLeftTrigger">
+                    <h2>お知らせ</h2>
+                    <ul>
+                        <li><a href="#"><time datetime="2021-12-23">2021.12.23</time>年始年末のお取引について</a></li>
+                        <li><a href="#"><time datetime="2021-04-15">2021.04.15</time>ゴールデンウィークの営業について</a></li>
+                    </ul>
+                </article>
+                <!--/main-lead-->
             </div>
-        </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container px-4 px-lg">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
-                        </div>
-                    </div> -->
+
+            <section id="service">
+                <header class="fadeLeftTrigger">
+                    <h2>研究紹介</h2>
+                    <p>CGや触覚技術などを用いたVRやARのエンターテーメントシステムの開発</p>
+                    <p>クラウドとセキュリティ技術と組み合わせ、デジタルツインシステムの開発を目指します。</p>
+                </header>
+                <div class="service-area fadeUpTrigger">
+                    <ul class="randomScroll">
+                        <li><a href="#" class="btnlinestretches">Visual Contents</a></li>
+                        <li><a href="#" class="btnlinestretches">Webアプリ</a></li>
+                        <li><a href="#" class="btnlinestretches">ネットワーク</a></li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-        <!-- Portfolio-->
-        <div id="portfolio">
-            <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div> -->
-                    <!-- <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div> -->
+            </section>
+
+            <section id="message">
+                <h2 class="heading fadeLeftTrigger">Visual Contents</h2>
+
+                <div class="message-area">
+                    <div class="message-img fadeRightTrigger"></div>
+                    <section class="message-content fadeLeftTrigger">
+                        <div class="message-box">
+                            <h3>視覚情報分野</h3>
+                            <p>CGやVR・ARのコンテンツ制作を研究しています。 <br> また、インタラクティブアートに関わる技術の開発も行います。<br><br><br><br>
+                            </p>
+                            <div class="message-btn"><a href="#" class="btn bgcenterx"><span>ホーム</span></a></div>
+                        </div>
+                    </section>
+                    <!--/message-area-->
                 </div>
+            </section>
+
+            <section id="history">
+                <h2 class="heading fadeRightTrigger">Web Application</h2>
+                <div class="history-area">
+                    <div class="history-img fadeLeftTrigger"></div>
+                    <div class="history-content fadeRightTrigger">
+                        <div class="message-box message-box2">
+                            <h3>視覚情報分野</h3>
+                            <p>CGやVR・ARのコンテンツ制作を研究しています。 <br> また、インタラクティブアートに関わる技術の開発も行います。<br><br><br><br>
+                            </p>
+                            <div class="message-btn"><a href="#" class="btn bgcenterx"><span>ホーム</span></a></div>
+                        </div>
+                    </div>
+                    <!--/history-area-->
+                </div>
+            </section>
+            <section id="message">
+                <h2 class="heading fadeLeftTrigger">Message</h2>
+
+                <div class="message-area">
+                    <div class="message-img fadeRightTrigger"></div>
+                    <section class="message-content fadeLeftTrigger">
+                        <div class="message-box">
+                            <h3>万全の教育体制で<br>エキスパートを派遣</h3>
+                            <p>杉山株式会社は、<br>万全の教育体制で派遣社員の皆様を<br>サポートし、人材を必要としている<br>企業様にエキスパートを送り出します。<br>どうぞお気軽にご相談ください。
+                            </p>
+                            <div class="message-btn"><a href="#" class="btn bgcenterx"><span>会社概要</span></a></div>
+                        </div>
+                    </section>
+                    <!--/message-area-->
+                </div>
+            </section>
+        </main>
+        <div id="footer">
+            <div class="footer-r">
+                <section class="map-area">
+                    <h2>交通アクセス</h2>
+                    <div class="map-address">
+                        <div class="map-address-area">
+                            <address>〒104-0061<br>東京都中央区銀座5丁目1-1</address>
+                            <a href="#" target="_blank" class="btn bgcenterout"><span>Google Map</span></a>
+                        </div>
+                    </div>
+                    <div class="map-block">
+                        <div class="iframe-area">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.1872337842015!2d139.75989081525861!3d35.6723914801963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bef7abe6d7f%3A0x7c12dce58bb5263f!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yV5LiB55uu77yR4oiS77yR!5e0!3m2!1sja!2sjp!4v1577446697807!5m2!1sja!2sjp"
+                                width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
+                </section>
+                <ul class="footer-link">
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">会社概要</a></li>
+                    <li><a href="#">事業紹介</a></li>
+                    <li><a href="#">求人情報</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">アクセス</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+                <!--/footer-r-->
             </div>
+            <div class="footer-l">
+                <section class="footer-contact">
+                    <div class="footer-contact-area">
+                        <h2>中村研究室</h2>
+                        <a href="tel:03-1234-5678">03-1234-5678</a>
+                        <p>電話受付：平日9時〜17時</p>
+                        <!--/footer-contact-area-->
+                    </div>
+                </section>
+                <footer id="copyright">
+                    <small>&copy; Sugiyama Co.</small>
+                </footer>
+                <!--/footer-l-->
+            </div>
+            <div id="page-top"><a href="#"><span></span></a></div>
+            <!--/footer-->
         </div>
-        <!-- Call to action-->
-        <section class="page-section bg-dark text-white">
-            <div class="container px-4 px-lg-5 text-center">
-                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-            </div>
-        </section>
-        <!-- Contact-->
-        <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Let's Get In Touch!</h2>
-                        <hr class="divider" />
-                        <p class="text-muted mb-5">Ready to start your next project with us? Send us a messages and we will get back to you as soon as possible!</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Email address</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Phone number</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                                </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
-                        </form>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Company Name</div></div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-    </body>
+        <!--/container-->
+    </div>
+
+    <!--=============JS ===============-->
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--機能編 8-1-9 スクロールの速さが変化-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--自作のJS-->
+    <script src="js/script.js"></script>
+</body>
+
 </html>
