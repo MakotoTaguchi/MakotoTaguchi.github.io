@@ -480,8 +480,8 @@ img {
     z-index: 2;
 }
 
-#message .h2{
-    right: 25%;
+#message .h2 {
+    right: 10%;
 }
 
 .message-area {
@@ -544,7 +544,7 @@ img {
     letter-spacing: 0.1em;
 }
 
-.message-box2 p{
+.message-box2 p {
     writing-mode: vertical-lr;
 }
 
@@ -609,7 +609,9 @@ _:-ms-lang(x)::-ms-backdrop,
         top: 40px;
     }
 
-    .message-img,
+    .message-img1,
+    .message-img2,
+    .message-img3,
     .message-content {
         width: 100%;
     }
@@ -662,7 +664,15 @@ _:-ms-lang(x)::-ms-backdrop,
 
 
 @media screen and (max-width:430px) {
-    .message-img {
+    .message-img1 {
+        height: 20vh;
+    }
+
+    .message-img2 {
+        height: 20vh;
+    }
+
+    .message-img3 {
         height: 20vh;
     }
 }
