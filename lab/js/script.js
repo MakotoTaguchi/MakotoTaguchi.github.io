@@ -89,13 +89,13 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 if (windowwidth > 768) {
     var responsiveImage = [ //PC逕ｨ縺ｮ逕ｻ蜒�
         {
-            src: './img/main_01.jpg'
+            src: './img/koudai.jpeg'
         },
         {
-            src: './img/main_02.jpg'
+            src: './img/computer.jpg'
         },
         {
-            src: './img/main_03.jpg'
+            src: './img/network.jpg'
         }
     ];
 } else {
