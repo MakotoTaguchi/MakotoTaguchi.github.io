@@ -44,7 +44,7 @@ img {
     font-family: 'Alex Brush', cursive;
     font-size: 5vw;
     font-weight: normal;
-    color: #182578;
+    color: #333;
     animation-delay: 0.3s;
 }
 
@@ -71,7 +71,7 @@ img {
     top: 25px;
     left: 50%;
     transform: translateX(-50%);
-    color: #182578;
+    color: #333;
 }
 
 #g-nav ul {
@@ -142,11 +142,11 @@ img {
 }
 
 #header ul#utility-navi li:last-child a {
-    background: #182578;
+    background: #000;
 }
 
 #header ul#utility-navi li:last-child a:hover {
-    background: #1e2f98;
+    background: #333;
 }
 
 @media screen and (max-width:768px) {
@@ -375,7 +375,7 @@ img {
 }
 
 #service header {
-    background: #182578;
+    background: #333;
     color: #fff;
     width: 90%;
     padding: 50px 0 100px 0;
@@ -466,6 +466,82 @@ img {
 
 }
 
+/* pro */
+
+#pro {
+    position: relative;
+    text-align: center;
+    padding: 0;
+
+}
+
+#pro header {
+    background: #333;
+    color: #fff;
+    width: 90%;
+    padding: 50px 0 50px 0;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+
+#pro header h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+#pro header p {
+    margin: 0 0 30px 0;
+}
+
+#pro header p br {
+    display: none;
+}
+
+#pro .service-area {
+    background: #fff;
+    padding: 70px;
+    width: 70%;
+    position: relative;
+    top: -50px;
+    left: 10%;
+    z-index: 2;
+}
+
+@media screen and (max-width:960px) {
+    #pro header {
+        width: 100%;
+    }
+
+    #pro .service-area {
+        width: 80%;
+        left: 10%;
+        padding: 80px 20px 30px 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    #pro {
+        padding: 200px 0 0 0;
+    }
+}
+
+@media screen and (max-width:550px) {
+    #pro .service-area {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #pro .service-area {
+        width: 100%;
+        left: 0;
+        font-size: 0.9rem;
+    }
+
+}
+
 /* message */
 
 #message {
@@ -514,6 +590,14 @@ img {
     background-size: cover;
     height: 50vh;
     width: 48%;
+}
+
+.message-img4 {
+    background: url("../img/pro.jpeg") no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    width: 25%;
+    margin-right: 100px;
 }
 
 .message-content {
@@ -612,11 +696,14 @@ _:-ms-lang(x)::-ms-backdrop,
     .message-img1,
     .message-img2,
     .message-img3,
-    .message-content {
+    .message-img4 .message-content {
         width: 100%;
     }
 
-    .message-img {
+    .message-img1,
+    .message-img2,
+    .message-img3,
+    .message-img4 {
         height: 40vh;
     }
 
@@ -675,6 +762,10 @@ _:-ms-lang(x)::-ms-backdrop,
     .message-img3 {
         height: 20vh;
     }
+
+    .message-img4 {
+        height: 20vh;
+    }
 }
 
 @media screen and (max-width:370px) {
@@ -683,7 +774,6 @@ _:-ms-lang(x)::-ms-backdrop,
         display: none;
     }
 }
-
 
 /* history */
 
@@ -751,6 +841,7 @@ _:-ms-lang(x)::-ms-backdrop,
     }
 }
 
+
 /* footer */
 
 #footer {
@@ -764,7 +855,7 @@ _:-ms-lang(x)::-ms-backdrop,
 #footer .footer-r {
     width: 70%;
     padding: 40px;
-    background: #182578;
+    background: #000;
     color: #fff;
 }
 
