@@ -377,7 +377,6 @@ img {
 @media screen and (max-width:550px) {
     #research h2 {
         margin: 0 0 50px 0;
-        z-index: 99;
     }
 }
 
@@ -470,7 +469,7 @@ img {
 
 #research .research-area .content-area h3 {
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 0 0 30px 0;
 }
 
@@ -487,4 +486,126 @@ img {
 
 #research .btn {
     text-align: right;
+}
+
+/* about */
+
+#about {
+    margin: 0 0 200px 0;
+}
+
+@media screen and (max-width:768px) {
+    #about {
+        margin: 0 0 100px 0;
+    }
+
+}
+
+#about h2 {
+    text-align: center;
+    color: #00b7b8;
+    margin: 0 0 100px 0;
+}
+
+@media screen and (max-width:550px) {
+    #about h2 {
+        margin: 0 0 50px 0;
+    }
+}
+
+#about .about-list {
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#about .about-list li {
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 15px 0;
+    padding: 0 0 15px 0;
+}
+
+#about .about-list dl {
+    display: flex;
+    justify-content: space-between;
+}
+
+#about .about-list dt {
+    width: 30%;
+    padding: 0 0 0 40px;
+}
+
+@media screen and (max-width:590px) {
+
+    #about .about-list dt {
+        padding: 0 0 0 10px;
+    }
+}
+
+#about .about-list dd {
+    width: 65%;
+}
+
+/* faq */
+
+#faq {
+    margin: 0 0 200px 0;
+}
+
+#faq h2 {
+    text-align: center;
+    margin: 0 0 100px 0;
+}
+
+
+#faq h2 span.bgLRextend::before {
+    background: #333;
+}
+
+.faq-bg {
+    position: relative;
+    height: 55vh;
+    background: url("../img/pro.jpeg") no-repeat center;
+    background-size: cover;
+    margin: 0 0 200px 25%;
+}
+
+.faq-bg::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -32%;
+    width: 100%;
+    height: 55vh;
+    background: #dcdcdc;
+    z-index: -1;
+}
+
+@media screen and (max-width:768px) {
+
+    .faq-bg,
+    .faq-bg::after {
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width:550px) {
+    #faq {
+        margin: 0 0 100px 0;
+    }
+
+    #faq h2 {
+        margin: 0 0 50px 0;
+
+    }
+
+    .faq-bg {
+        margin: 0 0 100px 25%;
+        background-position: 0px 0.01px;
+    }
+
+    .faq-bg,
+    .faq-bg::after {
+        height: 36vh;
+    }
 }
