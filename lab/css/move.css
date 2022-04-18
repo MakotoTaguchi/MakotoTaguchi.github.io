@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* アニメーションなどのためのCSS */
+
+/* ボタン */
+.openbtn {
+    display: none;
+}
+
+
+@media screen and (max-width:1300px) {
+
+    .openbtn {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        /* ボタンを最前面に */
+        cursor: pointer;
+        width: 94px;
+        height: 94px;
+        background: #182578;
+    }
+
+    /* ×に変化 */
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 23px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #fff;
+        width: 45%;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 33px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 46px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 58px;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 41px;
+        left: 28px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 52px;
+        left: 28px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .openbtn {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* ×に変化 */
+    .openbtn span {
+        left: 17px;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 20px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 33px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 45px;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 28px;
+        left: 22px;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 40px;
+        left: 22px;
+    }
+
+}
