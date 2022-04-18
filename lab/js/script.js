@@ -1,89 +1,61 @@
-/*===========================================================*/
-/*讖溯�邱ｨ  5-1-9繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ騾比ｸｭ縺ｧ繝倥ャ繝繝ｼ縺梧ｶ医∴縲∽ｸ翫↓繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺吶ｋ縺ｨ蠕ｩ豢ｻ*/
-/*===========================================================*/
+var beforePos = 0;
 
-var beforePos = 0; //繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ蛟､縺ｮ豈碑ｼ�畑縺ｮ險ｭ螳�
-
-//繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ騾比ｸｭ縺ｧ繝倥ャ繝繝ｼ縺梧ｶ医∴縲∽ｸ翫↓繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺吶ｋ縺ｨ蠕ｩ豢ｻ縺吶ｋ險ｭ螳壹ｒ髢｢謨ｰ縺ｫ縺ｾ縺ｨ繧√ｋ
 function ScrollAnime() {
-    var elemTop = $('#service').offset().top; //#service縺ｮ菴咲ｽｮ縺ｾ縺ｧ縺阪◆繧�
+    var elemTop = $('#service').offset().top;
     var scroll = $(window).scrollTop();
-    //繝倥ャ繝繝ｼ縺ｮ蜃ｺ縺怜�繧後ｒ縺吶ｋ
     if (scroll == beforePos) {
-        //IE11蟇ｾ遲悶〒蜃ｦ逅�ｒ蜈･繧後↑縺�
-    } else if (elemTop > scroll || 0 > scroll - beforePos) {
-        //繝倥ャ繝繝ｼ縺御ｸ翫°繧牙�迴ｾ縺吶ｋ
-        $('#header').removeClass('UpMove'); //#header縺ｫUpMove縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ髯､縺�
-        $('#header').addClass('DownMove'); //#header縺ｫDownMove縺ｮ繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ蜉�
+        $('#header').removeClass('UpMove');
+        $('#header').addClass('DownMove');
     } else {
-        //繝倥ャ繝繝ｼ縺御ｸ翫↓豸医∴繧�
-        $('#header').removeClass('DownMove'); //#header縺ｫDownMove縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ髯､縺�
-        $('#header').addClass('UpMove'); //#header縺ｫUpMove縺ｮ繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ蜉�
+        $('#header').removeClass('DownMove');
+        $('#header').addClass('UpMove');
     }
 
-    beforePos = scroll; //迴ｾ蝨ｨ縺ｮ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ蛟､繧呈ｯ碑ｼ�畑縺ｮbeforePos縺ｫ譬ｼ邏�
+    beforePos = scroll;
 }
-/*===========================================================*/
-/*讖溯�邱ｨ  5-1-21 繧ｯ繝ｪ繝�け縺励◆繧牙�蠖｢閭梧勹縺梧僑螟ｧ�亥承荳九°繧会ｼ�*/
-/*===========================================================*/
 
-$(".openbtn").click(function () { //繝懊ち繝ｳ縺後け繝ｪ繝�け縺輔ｌ縺溘ｉ
-    $(this).toggleClass('active'); //繝懊ち繝ｳ閾ｪ霄ｫ縺ｫ active繧ｯ繝ｩ繧ｹ繧剃ｻ倅ｸ弱＠
-    $("#g-nav").toggleClass('panelactive'); //繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺ｫpanelactive繧ｯ繝ｩ繧ｹ繧剃ｻ倅ｸ�
-    $(".circle-bg").toggleClass('circleactive'); //荳ｸ閭梧勹縺ｫcircleactive繧ｯ繝ｩ繧ｹ繧剃ｻ倅ｸ�
+$(".openbtn").click(function () {
+    $(this).toggleClass('active');
+    $("#g-nav").toggleClass('panelactive');
+    $(".circle-bg").toggleClass('circleactive');
 });
 
-$("#g-nav a").click(function () { //繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ繝ｪ繝ｳ繧ｯ縺後け繝ｪ繝�け縺輔ｌ縺溘ｉ
-    $(".openbtn").removeClass('active'); //繝懊ち繝ｳ縺ｮ active繧ｯ繝ｩ繧ｹ繧帝勁蜴ｻ縺�
-    $("#g-nav").removeClass('panelactive'); //繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮpanelactive繧ｯ繝ｩ繧ｹ繧帝勁蜴ｻ
-    $(".circle-bg").removeClass('circleactive'); //荳ｸ閭梧勹縺ｮcircleactive繧ｯ繝ｩ繧ｹ繧帝勁蜴ｻ
+$("#g-nav a").click(function () {
+    $(".openbtn").removeClass('active');
+    $("#g-nav").removeClass('panelactive');
+    $(".circle-bg").removeClass('circleactive');
 });
 
-/*===========================================================*/
-/*讖溯�邱ｨ  9-1-5 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繧偵☆繧九→繧ｨ繝ｪ繧｢縺ｮ鬮倥＆縺ｫ蜷医ｏ縺帙※邱壹′莨ｸ縺ｳ繧�*/
-/*===========================================================*/
-
-//邱壹′莨ｸ縺ｳ繧九◆繧√�險ｭ螳壹ｒ髢｢謨ｰ縺ｧ縺ｾ縺ｨ繧√ｋ
 function ScrollTimelineAnime() {
-    $('.timeline li').each(function () { // 縺昴ｌ縺槭ｌ縺ｮli隕∫ｴ�縺ｮ
-        var elemPos = $(this).offset().top; // 荳翫°繧峨�鬮倥＆蜿門ｾ�
-        var scroll = $(window).scrollTop(); // 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ蛟､蜿門ｾ�
-        var windowHeight = $(window).height(); // window縺ｮ鬮倥＆蜿門ｾ�
-        var startPoint = 500; //邱壹ｒ繧ｹ繧ｿ繝ｼ繝医＆縺帙ｋ菴咲ｽｮ繧呈欠螳壺ｻ繝ｬ繧､繧｢繧ｦ繝医↓繧医▲縺ｦ隱ｿ謨ｴ縺励※縺上□縺輔＞
+    $('.timeline li').each(function () {
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        var startPoint = 500;
         if (scroll >= elemPos - windowHeight - startPoint) {
-            var H = $(this).outerHeight(true) //li縺ｮ菴咏區縺ｨ鬮倥＆繧貞性繧√◆謨ｰ蛟､繧貞叙蠕�
-            //繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ蛟､縺九ｉ隕∫ｴ�縺ｾ縺ｧ縺ｮ鬮倥＆繧貞ｼ輔＞縺溷､繧偵〕i縺ｮ鬮倥＆縺ｮ蜊雁�縺ｮ繝代�繧ｻ繝ｳ繝医〒蜃ｺ縺�
-            var percent = (scroll + startPoint - elemPos) / (H / 2) * 100; //li縺ｮ菴咏區縺ｨ鬮倥＆縺ｮ蜊雁�縺ｧ邱壹ｒ100��↓莨ｸ縺ｰ縺�
+            var H = $(this).outerHeight(true)
 
-            // 100% 繧定ｶ�∴縺溘ｉ縺壹▲縺ｨ100%繧貞�繧檎ｶ壹￠繧�
+            var percent = (scroll + startPoint - elemPos) / (H / 2) * 100;
+
             if (percent > 100) {
                 percent = 100;
             }
-            // 繝懊�繝繝ｼ縺ｮ髟ｷ縺輔ｒ繧ｻ繝�ヨ
+
             $(this).children('.border-line').css({
-                height: percent + "%", //CSS縺ｧ繝代�繧ｻ繝ｳ繝域欠螳�
+                height: percent + "%",
             });
         }
     });
 }
 
-/*===========================================================*/
-/*讖溯�邱ｨ 8-1-9	繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ騾溘＆縺悟､牙喧*/
-/*===========================================================*/
 
-// #page-top繧偵け繝ｪ繝�け縺励◆髫帙�險ｭ螳�
 $('#page-top').click(function () {
     $('body,html').animate({
-        scrollTop: 0 //繝壹�繧ｸ繝医ャ繝励∪縺ｧ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ
-    }, 1500, "easeInOutQuint"); //繝壹�繧ｸ繝医ャ繝励せ繧ｯ繝ｭ繝ｼ繝ｫ縺ｮ騾溘＆窶ｻ謨ｰ蟄励′螟ｧ縺阪＞縺ｻ縺ｩ驕�￥縺ｪ繧�, easing繝励Λ繧ｰ繧､繝ｳ縺ｧ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ騾溷ｺｦ縺ｫ螟牙喧
-    //linear縲《wing縲）swing縲‘aseInQuad縲‘aseOutQuad縲‘aseInOutQuad縲‘aseInCubic縲‘aseOutCubic縲‘aseInOutCubic縲‘aseInQuart縲‘aseOutQuart縲‘aseInOutQuart縲‘aseInQuint縲‘aseOutQuint縲‘aseInOutQuint縲‘aseInSine縲‘aseOutSine縲‘aseInOutSine縲‘aseInExpo縲‘aseOutExpo縲‘aseInOutExpo縲‘aseInCirc縲‘aseOutCirc縲‘aseInOutCirc縲‘aseInElastic縲‘aseOutElastic縲‘aseInOutElastic縲‘aseInBack縲‘aseOutBack縲‘aseInOutBack縲‘aseInBounce縲‘aseOutBounce縲‘aseInOutBounce縺ｪ縺ｩ縺九ｉ驕ｸ謚槫庄閭ｽ
-    return false; //繝ｪ繝ｳ繧ｯ閾ｪ菴薙�辟｡蜉ｹ蛹�
-});
+        scrollTop: 0
+    }, 1500, "easeInOutQuint");
 
-/*===========================================================*/
-/*讖溯�邱ｨ  6-1-3 繧�▲縺上ｊ繧ｺ繝ｼ繝�繧｢繧ｦ繝医＆縺帙↑縺後ｉ蜈ｨ逕ｻ髱｢縺ｧ隕九○繧�*/
-/*===========================================================*/
-//逕ｻ蜒上�險ｭ螳�
+    return false;
+});
 
 var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
 if (windowwidth > 768) {
@@ -99,8 +71,7 @@ if (windowwidth > 768) {
         }
     ];
 } else {
-    var responsiveImage = [ //繧ｿ繝悶Ξ繝�ヨ繧ｵ繧､繧ｺ��768px�我ｻ･荳狗畑縺ｮ逕ｻ蜒�
-        {
+    var responsiveImage = [{
             src: './img/main_sp01.jpg'
         },
         {
@@ -112,46 +83,38 @@ if (windowwidth > 768) {
     ];
 }
 
-//Vegas蜈ｨ菴薙�險ｭ螳�
-
 $('#slider').vegas({
-    overlay: false, //逕ｻ蜒上�荳翫↓邯ｲ邱壹ｄ繝峨ャ繝医�繧ｪ繝ｼ繝舌�繝ｬ繧､繝代ち繝ｼ繝ｳ逕ｻ蜒上ｒ謖�ｮ壹＠縺ｪ縺��
-    transition: 'blur', //蛻�ｊ譖ｿ繧上ｊ縺ｮ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縲Ｉttp://vegas.jaysalvat.com/documentation/transitions/蜿ら�縲Ｇade縲’ade2縲《lideLeft縲《lideLeft2縲《lideRight縲《lideRight2縲《lideUp縲《lideUp2縲《lideDown縲《lideDown2縲】oomIn縲】oomIn2縲】oomOut縲】oomOut2縲《wirlLeft縲《wirlLeft2縲《wirlRight縲《wirlRight2縲｜urnburn2縲｜lurblur2縲’lash縲’lash2縺瑚ｨｭ螳壼庄閭ｽ縲�
-    transitionDuration: 2000, //蛻�ｊ譖ｿ繧上ｊ縺ｮ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ譎る俣繧偵Α繝ｪ遘貞腰菴阪〒險ｭ螳�
-    delay: 10000, //繧ｹ繝ｩ繧､繝蛾俣縺ｮ驕�ｻｶ繧偵Α繝ｪ遘貞腰菴阪〒縲�
-    animationDuration: 20000, //繧ｹ繝ｩ繧､繝峨い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ譎る俣繧偵Α繝ｪ遘貞腰菴阪〒險ｭ螳�
-    animation: 'kenburns', //繧ｹ繝ｩ繧､繝峨い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ遞ｮ鬘槭Ｉttp://vegas.jaysalvat.com/documentation/transitions/蜿ら�縲Ｌenburns縲〔enburnsUp縲〔enburnsDown縲〔enburnsRight縲〔enburnsLeft縲〔enburnsUpLeft縲〔enburnsUpRight縲〔enburnsDownLeft縲〔enburnsDownRight縲〉andom縺瑚ｨｭ螳壼庄閭ｽ縲�
-    slides: responsiveImage, //逕ｻ蜒剰ｨｭ螳壹ｒ隱ｭ繧
-    timer: false, //繝励Ο繧ｰ繝ｬ繧ｹ繝舌�髱櫁｡ｨ遉ｺ
+    overlay: false,
+    transitionDuration: 2000,
+    delay: 10000,
+    animationDuration: 20000,
+    animation: 'kenburns',
+    slides: responsiveImage,
+    timer: false,
 });
 
-/*===========================================================*/
-/*蜊ｰ雎｡邱ｨ 4-13 繝ｩ繝ｳ繝繝�縺ｫ迴ｾ繧後ｋ��CSS x jQuery��*/
-/*===========================================================*/
-
-// 蜍輔″縺ｮ縺阪▲縺九￠縺ｮ襍ｷ轤ｹ縺ｨ縺ｪ繧九い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ蜷榊燕繧貞ｮ夂ｾｩ
 function moveAnimation() {
-    //繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺励◆繧峨Λ繝ｳ繝繝�縺ｫ蜃ｺ迴ｾ	
-    var randomElm2 = $(".randomScroll"); //隕ｪ隕∫ｴ�蜿門ｾ�
-    var randomElm2Child = $(randomElm2).children(); //隕ｪ縺ｮ蟄占ｦ∫ｴ�繧貞叙蠕�
+
+    var randomElm2 = $(".randomScroll");
+    var randomElm2Child = $(randomElm2).children();
     randomScrollAnime();
 
     function randomScrollAnime() {
-        var elemPos = $(".randomScroll").offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+        var elemPos = $(".randomScroll").offset().top - 50;
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight) {
-            if (randomElm2Child.length > 0) { //驟榊�謨ｰ莉･荳翫〒縺ゅｌ縺ｰ蜃ｦ逅�ｒ縺翫％縺ｪ縺�
-                var rnd = Math.floor(Math.random() * randomElm2Child.length); //驟榊�謨ｰ縺九ｉ陦ｨ遉ｺ縺吶ｋ謨ｰ蛟､繧偵Λ繝ｳ繝繝�縺ｧ蜿門ｾ�
-                var moveData = "flipDown"; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ蜷搾ｼ戮SS縺ｮ繧ｯ繝ｩ繧ｹ蜷阪ｒ謖�ｮ�
-                if (animeFlag) { //繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺吶ｋ蠎ｦ縺ｫ蜍穂ｽ懊☆繧九�縺ｧ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺檎ｵゅｏ繧九∪縺ｧ蜃ｦ逅�ｒ縺輔○縺ｪ縺�ｈ縺�↓縺吶ｋ
-                    animeFlag = false; //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ蜃ｦ逅�′邨ゅｏ繧九∪縺ｧ荳譎ら噪縺ｫfalse縺ｫ縺吶ｋ
-                    $(randomElm2Child[rnd]).addClass(moveData); //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ繧ｯ繝ｩ繧ｹ繧定ｿｽ蜉�
+            if (randomElm2Child.length > 0) {
+                var rnd = Math.floor(Math.random() * randomElm2Child.length);
+                var moveData = "flipDown";
+                if (animeFlag) {
+                    animeFlag = false;
+                    $(randomElm2Child[rnd]).addClass(moveData);
                     setTimeout(function () {
-                        animeFlag = true; //谺｡縺ｮ蜃ｦ逅�ｒ縺翫％縺ｪ縺�◆繧√↓true縺ｫ螟画峩
-                        randomScrollAnime(); //閾ｪ霄ｫ縺ｮ蜃ｦ逅�ｒ郢ｰ繧願ｿ斐☆
-                    }, 200); //0.2遘帝俣髫斐〒縲やｻ繝ｩ繝ｳ繝繝�縺ｮ繧ｹ繝斐�繝芽ｪｿ謨ｴ縺ｯ縺薙�謨ｰ蟄励ｒ螟画峩縺輔○繧�
-                    randomElm2Child.splice(rnd, 1); //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ霑ｽ蜉�縺ｨ縺ｪ縺｣縺溯ｦ∫ｴ�繧帝�蛻励°繧牙炎髯､
+                        animeFlag = true;
+                        randomScrollAnime();
+                    }, 200);
+                    randomElm2Child.splice(rnd, 1);
                 }
             }
 
@@ -162,129 +125,236 @@ function moveAnimation() {
     }
 }
 
-var animeFlag = true; //繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺吶ｋ蠎ｦ縺ｫ蜍穂ｽ懊☆繧九�縺ｧ繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺檎ｵゅｏ繧九∪縺ｧ蜃ｦ逅�ｒ縺輔○縺ｪ縺�ｈ縺�↓縺吶ｋ縺溘ａ縺ｮ螳夂ｾｩ
+var animeFlag = true;
 
-/*===========================================================*/
-/* 蜊ｰ雎｡邱ｨ 4 譛菴朱剞縺翫⊂縺医※縺翫″縺溘＞蜍輔″*/
-/*===========================================================*/
 
-// 蜍輔″縺ｮ縺阪▲縺九￠縺ｮ襍ｷ轤ｹ縺ｨ縺ｪ繧九い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ蜷榊燕繧貞ｮ夂ｾｩ
 function fadeAnime() {
-    // 4-1 縺ｵ繧上▲�井ｸ九°繧会ｼ�
 
-    $('.fadeUpTrigger').each(function () { //fadeUpTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
-        var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+    $('.fadeUpTrigger').each(function () {
+        var elemPos = $(this).offset().top - 50;
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight) {
-            $(this).addClass('fadeUp'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉfadeUp縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+            $(this).addClass('fadeUp');
         } else {
-            $(this).removeClass('fadeUp'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉfadeUp縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+            $(this).removeClass('fadeUp');
         }
     });
-    //4-1 縺ｵ繧上▲�亥ｷｦ縺九ｉ��
-    $('.fadeLeftTrigger').each(function () { //fadeLeftTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
-        var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+    $('.fadeLeftTrigger').each(function () {
+        var elemPos = $(this).offset().top - 50;
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight) {
-            $(this).addClass('fadeLeft'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉfadeLeft縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+            $(this).addClass('fadeLeft');
         } else {
-            $(this).removeClass('fadeLeft'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉfadeLeft縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+            $(this).removeClass('fadeLeft');
         }
     });
-    //4-1 縺ｵ繧上▲�亥承縺九ｉ��
-    $('.fadeRightTrigger').each(function () { //fadeRightTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
-        var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+
+    $('.fadeRightTrigger').each(function () {
+        var elemPos = $(this).offset().top - 50;
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight) {
-            $(this).addClass('fadeRight'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉfadeRight縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+            $(this).addClass('fadeRight');
         } else {
-            $(this).removeClass('fadeRight'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉfadeRight縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+            $(this).removeClass('fadeRight');
         }
     });
 }
 
-/*===========================================================*/
-/* 髢｢謨ｰ繧偵∪縺ｨ繧√ｋ*/
-/*===========================================================*/
-
-// 逕ｻ髱｢繧偵せ繧ｯ繝ｭ繝ｼ繝ｫ繧偵＠縺溘ｉ蜍輔°縺励◆縺��ｴ蜷医�險倩ｿｰ
 $(window).scroll(function () {
-    ScrollTimelineAnime(); //讖溯�邱ｨ 9-1-5 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繧偵☆繧九→繧ｨ繝ｪ繧｢縺ｮ鬮倥＆縺ｫ蜷医ｏ縺帙※邱壹′莨ｸ縺ｳ繧矩未謨ｰ繧貞他縺ｶ
-    ScrollAnime(); //讖溯�邱ｨ 5-1-9繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ騾比ｸｭ縺ｧ繝倥ャ繝繝ｼ縺梧ｶ医∴縲∽ｸ翫↓繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺吶ｋ縺ｨ蠕ｩ豢ｻ縺ｮ髢｢謨ｰ繧貞他縺ｶ
-    moveAnimation(); //蜊ｰ雎｡邱ｨ 4-13 繝ｩ繝ｳ繝繝�縺ｫ迴ｾ繧後ｋ��CSS x jQuery��
-    fadeAnime(); //蜊ｰ雎｡邱ｨ 4 譛菴朱剞縺翫⊂縺医※縺翫″縺溘＞蜍輔″縺ｮ髢｢謨ｰ繧貞他縺ｶ
+    ScrollTimelineAnime();
+    ScrollAnime();
+    moveAnimation();
+    fadeAnime();
 });
 
-// 繝壹�繧ｸ縺瑚ｪｭ縺ｿ霎ｼ縺ｾ繧後◆繧峨☆縺舌↓蜍輔°縺励◆縺��ｴ蜷医�險倩ｿｰ
 $(window).on('load', function () {
-    $("#splash-logo").delay(1200).fadeOut('slow'); //繝ｭ繧ｴ繧�1.2遘偵〒繝輔ぉ繝ｼ繝峨い繧ｦ繝医☆繧玖ｨ倩ｿｰ
+    $("#splash-logo").delay(1200).fadeOut('slow');
 
-    //=====縺薙％縺九ｉ繝ｭ繝ｼ繝�ぅ繝ｳ繧ｰ繧ｨ繝ｪ繧｢��splash繧ｨ繝ｪ繧｢�峨ｒ1.5遘偵〒繝輔ぉ繝ｼ繝峨い繧ｦ繝医＠縺溷ｾ後↓蜍輔°縺励◆縺ЙS繧偵∪縺ｨ繧√ｋ
-    $("#splash").delay(1500).fadeOut('slow', function () { //繝ｭ繝ｼ繝�ぅ繝ｳ繧ｰ繧ｨ繝ｪ繧｢��splash繧ｨ繝ｪ繧｢�峨ｒ1.5遘偵〒繝輔ぉ繝ｼ繝峨い繧ｦ繝医☆繧玖ｨ倩ｿｰ    
-        $('body').addClass('appear'); //繝輔ぉ繝ｼ繝峨い繧ｦ繝亥ｾ恵ody縺ｫappear繧ｯ繝ｩ繧ｹ莉倅ｸ�
-        ScrollTimelineAnime(); //讖溯�邱ｨ 9-1-5 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ繧偵☆繧九→繧ｨ繝ｪ繧｢縺ｮ鬮倥＆縺ｫ蜷医ｏ縺帙※邱壹′莨ｸ縺ｳ繧矩未謨ｰ繧貞他縺ｶ
-        ScrollAnime(); //讖溯�邱ｨ 5-1-9繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ騾比ｸｭ縺ｧ繝倥ャ繝繝ｼ縺梧ｶ医∴縲∽ｸ翫↓繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺吶ｋ縺ｨ蠕ｩ豢ｻ縺ｮ髢｢謨ｰ繧貞他縺ｶ
-        moveAnimation(); //蜊ｰ雎｡邱ｨ 4-13 繝ｩ繝ｳ繝繝�縺ｫ迴ｾ繧後ｋ��CSS x jQuery��	
+    $("#splash").delay(1500).fadeOut('slow', function () {
+        $('body').addClass('appear');
+        ScrollTimelineAnime();
+        ScrollAnime();
+        moveAnimation();
     });
-    //=====縺薙％縺ｾ縺ｧ繝ｭ繝ｼ繝�ぅ繝ｳ繧ｰ繧ｨ繝ｪ繧｢��splash繧ｨ繝ｪ繧｢�峨ｒ1.5遘偵〒繝輔ぉ繝ｼ繝峨い繧ｦ繝医＠縺溷ｾ後↓蜍輔°縺励◆縺ЙS繧偵∪縺ｨ繧√ｋ
 
-    //=====縺薙％縺九ｉ閭梧勹縺御ｼｸ縺ｳ縺溷ｾ後↓蜍輔°縺励◆縺ЙS繧偵∪縺ｨ繧√◆縺��ｴ蜷医�
     $('.splashbg1').on('animationend', function () {
-        fadeAnime(); //蜊ｰ雎｡邱ｨ 4 譛菴朱剞縺翫⊂縺医※縺翫″縺溘＞蜍輔″縺ｮ髢｢謨ｰ繧貞他縺ｶ
+        fadeAnime();
     });
-    //=====縺薙％縺ｾ縺ｧ閭梧勹縺御ｼｸ縺ｳ縺溷ｾ後↓蜍輔°縺励◆縺ЙS繧偵∪縺ｨ繧√ｋ
 
 });
 
 $(window).on('load', function () {
 
-    /*===========================================================*/
-    /*讖溯�邱ｨ  4-1-2 繝励Ο繧ｰ繝ｬ繧ｹ繝舌��区焚蟄励き繧ｦ繝ｳ繝医い繝��*/
-    /*===========================================================*/
-
-    //繝�く繧ｹ繝医�繧ｫ繧ｦ繝ｳ繝医い繝��+繝舌�縺ｮ險ｭ螳�
-    var bar = new ProgressBar.Line(splash_text, { //id蜷阪ｒ謖�ｮ�
-        easing: 'easeInOut', //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ蜉ｹ譫徑inear縲‘aseIn縲‘aseOut縲‘aseInOut縺梧欠螳壼庄閭ｽ
-        duration: 1000, //譎る俣謖�ｮ�(1000��1遘�)
-        strokeWidth: 0.2, //騾ｲ謐励ご繝ｼ繧ｸ縺ｮ螟ｪ縺�
-        color: '#00b7b8', //騾ｲ謐励ご繝ｼ繧ｸ縺ｮ繧ｫ繝ｩ繝ｼ
-        trailWidth: 0.2, //繧ｲ繝ｼ繧ｸ繝吶�繧ｹ縺ｮ邱壹�螟ｪ縺�
-        trailColor: '#ccc', //繧ｲ繝ｼ繧ｸ繝吶�繧ｹ縺ｮ邱壹�繧ｫ繝ｩ繝ｼ
-        text: { //繝�く繧ｹ繝医�蠖｢迥ｶ繧堤峩謗･謖�ｮ�				
-            style: { //螟ｩ蝨ｰ荳ｭ螟ｮ縺ｫ驟咲ｽｮ
+    var bar = new ProgressBar.Line(splash_text, {
+        easing: 'easeInOut',
+        duration: 1000,
+        strokeWidth: 0.2,
+        color: '#00b7b8',
+        trailWidth: 0.2,
+        trailColor: '#ccc',
+        text: {
+            style: {
                 position: 'absolute',
                 left: '50%',
                 top: '50%',
                 padding: '0',
-                margin: '-30px 0 0 0', //繝舌�繧医ｊ荳翫↓驟咲ｽｮ
+                margin: '-30px 0 0 0',
                 transform: 'translate(-50%,-50%)',
                 'font-size': '1rem',
                 color: '#00b7b8',
             },
-            autoStyleContainer: false //閾ｪ蜍穂ｻ倅ｸ弱�繧ｹ繧ｿ繧､繝ｫ繧貞�繧�
+            autoStyleContainer: false
         },
         step: function (state, bar) {
-            bar.setText(Math.round(bar.value() * 100) + ' %'); //繝�く繧ｹ繝医�謨ｰ蛟､
+            bar.setText(Math.round(bar.value() * 100) + ' %');
         }
     });
 
-    //繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ繧ｹ繧ｿ繝ｼ繝�
-    bar.animate(1.0, function () { //繝舌�繧呈緒逕ｻ縺吶ｋ蜑ｲ蜷医ｒ謖�ｮ壹＠縺ｾ縺� 1.0 縺ｪ繧�100%縺ｾ縺ｧ謠冗判縺励∪縺�
+    bar.animate(1.0, function () {
+        $("#splash").delay(500).fadeOut(800, function () {
 
-        //=====縺薙％縺九ｉ繝ｭ繝ｼ繝�ぅ繝ｳ繧ｰ繧ｨ繝ｪ繧｢��splash繧ｨ繝ｪ繧｢�峨ｒ0.8遘偵〒繝輔ぉ繝ｼ繝峨い繧ｦ繝医＠縺溷ｾ後↓蜍輔°縺励◆縺ЙS繧偵∪縺ｨ繧√ｋ
-        $("#splash").delay(500).fadeOut(800, function () { //#splash繧ｨ繝ｪ繧｢繧偵ヵ繧ｧ繝ｼ繝峨い繧ｦ繝医＠縺溷ｾ後↓繧｢繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ繧貞ｮ溯｡�
+            $('body').addClass('appear');
 
-            $('body').addClass('appear'); //繝輔ぉ繝ｼ繝峨い繧ｦ繝亥ｾ恵ody縺ｫappear繧ｯ繝ｩ繧ｹ莉倅ｸ�
-
-            fadeAnime(); //蜊ｰ雎｡邱ｨ 4 譛菴朱剞縺翫⊂縺医※縺翫″縺溘＞蜍輔″縺ｮ髢｢謨ｰ繧貞他縺ｶ
-            RandomInit(); //蜊ｰ雎｡邱ｨ 8-8 繝�く繧ｹ繝医′繝ｩ繝ｳ繝繝�縺ｫ蜃ｺ迴ｾ縲∝�譛溯ｨｭ螳壹ｒ隱ｭ縺ｿ霎ｼ縺ｿ
-            RandomAnimeControl(); //蜊ｰ雎｡邱ｨ 8-8 繝�く繧ｹ繝医′繝ｩ繝ｳ繝繝�縺ｫ蜃ｺ迴ｾ縲√い繝九Γ繝ｼ繧ｷ繝ｧ繝ｳ逕ｨ縺ｮ髢｢謨ｰ繧貞他縺ｶ
+            fadeAnime();
+            RandomInit();
+            RandomAnimeControl();
         });
-        //=====縺薙％縺ｾ縺ｧ繝ｭ繝ｼ繝�ぅ繝ｳ繧ｰ繧ｨ繝ｪ繧｢��splash繧ｨ繝ｪ繧｢�峨ｒ0.8遘偵〒繝輔ぉ繝ｼ繝峨い繧ｦ繝医＠縺溷ｾ後↓蜍輔°縺励◆縺ЙS繧偵∪縺ｨ繧√ｋ
 
     });
 
-}); // 縺薙％縺ｾ縺ｧ繝壹�繧ｸ縺瑚ｪｭ縺ｿ霎ｼ縺ｾ繧後◆繧峨☆縺舌↓蜍輔°縺励◆縺��ｴ蜷医�險倩ｿｰ
+});
+
+// 背景の幾何学模様
+particlesJS("particles-js", {
+    "particles": {
+        "number": {
+            "value": 38,
+            "density": {
+                "enable": true,
+                "value_area": 800
+            }
+        },
+        "color": {
+            "value": "#11a0ad"
+        },
+        "shape": {
+            "type": "polygon",
+            "stroke": {
+                "width": 0,
+            },
+            "polygon": {
+                "nb_sides": 3
+            },
+            "image": {
+                "width": 190,
+                "height": 100
+            }
+        },
+        "opacity": {
+            "value": 0.664994832269074,
+            "random": false,
+            "anim": {
+                "enable": true,
+                "speed": 2.2722661797524872,
+                "opacity_min": 0.08115236356258881,
+                "sync": false
+            }
+        },
+        "size": {
+            "value": 3,
+            "random": true,
+            "anim": {
+                "enable": false,
+                "speed": 40,
+                "size_min": 0.1,
+                "sync": false
+            }
+        },
+        "line_linked": {
+            "enable": true,
+            "distance": 150,
+            "color": "#11a0ad",
+            "opacity": 0.6,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 6,
+            "direction": "none",
+            "random": false,
+            "straight": false,
+            "out_mode": "out",
+            "bounce": false,
+            "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 961.4383117143238
+            }
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": {
+                "enable": false,
+                "mode": "repulse"
+            },
+            "onclick": {
+                "enable": false
+            },
+            "resize": true
+        }
+    },
+    "retina_detect": true
+});
+
+// function fadeAnime(){
+// 4-9 繧ｷ繝｣繝�ｼ亥ｷｦ縺九ｉ��
+
+$('.bgLRextendTrigger').each(function () { //bgLRextendTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
+    var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('bgLRextend'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉbgLRextend縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+    } else {
+        $(this).removeClass('bgLRextend'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉbgLRextend縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+    }
+});
+$('.bgappearTrigger').each(function () { //bgappearTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
+    var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('bgappear'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉbgappear縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+    } else {
+        $(this).removeClass('bgappear'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉbgappear縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+    }
+});
+// 4-1 縺ｵ繧上▲�井ｸ九°繧会ｼ�
+$('.fadeUpTrigger').each(function () { //fadeUpTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
+    var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('fadeUp'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉfadeUp縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+    } else {
+        $(this).removeClass('fadeUp'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉfadeUp縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+    }
+});
+
+// 4-2 繝代ち繝�ｼ亥ｷｦ縺ｸ��
+$('.flipLeftTrigger').each(function () { //flipLeftTrigger縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪′
+    var elemPos = $(this).offset().top - 50; //隕∫ｴ�繧医ｊ縲�50px荳翫�
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight) {
+        $(this).addClass('flipLeft'); // 逕ｻ髱｢蜀�↓蜈･縺｣縺溘ｉflipLeft縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ霑ｽ險�
+    } else {
+        $(this).removeClass('flipLeft'); // 逕ｻ髱｢螟悶↓蜃ｺ縺溘ｉflipLeft縺ｨ縺�≧繧ｯ繝ｩ繧ｹ蜷阪ｒ螟悶☆
+    }
+});
+
