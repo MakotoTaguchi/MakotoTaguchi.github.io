@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* レイアウトのためのCSS */
+
+/* common */
+html {
+    font-size: 62.5%;
+    /* 16px * 62.5% = 10px */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    color: #333;
+    /* RGB */
+    font-family: 'Baskervville', serif, "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+    font-weight: normal;
+    font-size: 1.6em;
+    line-height: 2.4rem;
+    text-align: left;
+    background-color: #faf6f9;
+}
+
