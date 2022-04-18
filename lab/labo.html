@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="utf-8">
-<title>中村研究室</title>
-<meta name="description"  content="中村研究室のホームページ">
-<meta name="robots" content="noindex,nofollow"><meta name="keywords"  content="">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<!--=============Google Font ===============-->
-<link href="https://fonts.googleapis.com/css?family=Alex+Brush%7CNoto+Serif+JP&display=swap" rel="stylesheet">
-<!--==============レイアウトを制御する独自のCSSを読み込み===============-->
-<!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
-<!--自作のCSS-->
-<link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/move.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>中村研究室</title>
+    <meta name="description" content="中村研究室のホームページ">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--=============Google Font ===============-->
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush%7CNoto+Serif+JP&display=swap" rel="stylesheet">
+    <!--==============レイアウトを制御する独自のCSSを読み込み===============-->
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.css">
+    <!--自作のCSS-->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/move.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
+
 <body>
+    <div id="particles-js"></div>
     <div id="container">
-        <header class="DownMove">
+        <header id="header" class="DownMove">
             <div class="openbtn">
                 <span></span><span></span><span></span>
             </div>
@@ -36,7 +40,81 @@
                     </ul>
                 </div>
             </nav>
+            <h1>中村研究室</h1>
+            <ul id="utility-navi">
+                <li><a href="#"><img src="img/map.svg" alt=""><span>アクセス</span></a></li>
+                <li><a href="#"><img src="img/contact.svg" alt=""><span>お問い合わせ</span></a></li>
+            </ul>
         </header>
+
+        <div class="circle-bg"></div>
+
+        <main id="main-area">
+            <div id="lead">
+                <div id="slider-area">
+                    <div id="slider"></div>
+                </div>
+
+                <h2 class="heading fadeRightTrigger">Concept</h2>
+                <p class="lead fadeRightTrigger">エンターテーメントから
+                    <span>新しい価値と分野の想像を</span></p>
+
+                <article id="news" class="fadeLeftTrigger">
+                    <h2>お知らせ</h2>
+                    <ul>
+                        <li><a href="#"><time datetime="2022-04-10">2022.04.10</time>2022年度前期 中村予定</a></li>
+                        <li><a href="#"><time datetime="2022-02-19">2022.2.19</time>2021年度卒業研究審査一覧</a></li>
+                    </ul>
+                </article>
+            </div>
+
+            <section id="research">
+                <h2><span class="bgextend bgLRextendTrigger"><span class="bgappearTrigger">研究紹介</span></span></h2>
+                <section class="fix research-area flex flex-wrap justify-between">
+                    <figure class="img flipLeftTrigger"><img src="img/vr.jpg" alt=""></figure>
+                    <div class="content flipLeftTrigger">
+                        <div class="content-area">
+                            <h3><span>Consulting</span>コンサルティング事業</h3>
+                            <p>経営・システム・デジタルマーケティングの目線でのコンサルティングを行います。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="research-area flex flex-wrap justify-between">
+                    <figure class="img flipLeftTrigger"><img src="img/ap.jpg" alt=""></figure>
+                    <div class="content flipLeftTrigger">
+                        <div class="content-area">
+                            <h3><span>Development</span>受託開発事業</h3>
+                            <p>プロジェクト/プロダクトマネージメントの観点からのご支援を致します。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="research-area flex flex-wrap justify-between">
+                    <figure class="img flipLeftTrigger"><img src="img/net.jpg" alt=""></figure>
+                    <div class="content flipLeftTrigger">
+                        <div class="content-area">
+                            <h3><span>Education</span>教育事業</h3>
+                            <p>エンジニアやデザイナーの養成、新人研修・プログラミング研修などを行っています。</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
     </div>
+
+    <!--=============JS ===============-->
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--機能編 8-1-9 スクロールの速さが変化-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!--機能編 6-1-3 ゆっくりズームアウトさせながら全画面で見せる-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vegas/2.4.4/vegas.min.js"></script>
+    <!--印象編　5-4 幾何学模様-->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!--自作のJS-->
+    <script src="js/script.js"></script>
 </body>
+
 </html>
