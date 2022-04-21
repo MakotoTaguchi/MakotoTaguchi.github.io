@@ -72,7 +72,7 @@ if (windowwidth > 768) {
     ];
 } else {
     var responsiveImage = [{
-            src: './img/koudai.jpg'
+            src: './img/koudai.jpeg'
         },
         {
             src: './img/computer.jpg'
@@ -177,7 +177,6 @@ $(window).on('load', function () {
         $('body').addClass('appear');
         ScrollTimelineAnime();
         ScrollAnime();
-        moveAnimation();
     });
 
     $('.splashbg1').on('animationend', function () {
@@ -217,10 +216,6 @@ $(window).on('load', function () {
         $("#splash").delay(500).fadeOut(800, function () {
 
             $('body').addClass('appear');
-
-            fadeAnime();
-            RandomInit();
-            RandomAnimeControl();
         });
 
     });
