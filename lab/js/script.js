@@ -1,7 +1,7 @@
 var beforePos = 0;
 
 function ScrollAnime() {
-    var elemTop = $('#service').offset().top;
+    var elemTop = $('#research').offset().top;
     var scroll = $(window).scrollTop();
     if (scroll == beforePos) {
         $('#header').removeClass('UpMove');
@@ -72,13 +72,13 @@ if (windowwidth > 768) {
     ];
 } else {
     var responsiveImage = [{
-            src: './img/main_sp01.jpg'
+            src: './img/koudai.jpg'
         },
         {
-            src: './img/main_sp02.jpg'
+            src: './img/computer.jpg'
         },
         {
-            src: './img/main_sp03.jpg'
+            src: './img/network.jpg'
         }
     ];
 }
@@ -93,82 +93,82 @@ $('#slider').vegas({
     timer: false,
 });
 
-function moveAnimation() {
+// function moveAnimation() {
 
-    var randomElm2 = $(".randomScroll");
-    var randomElm2Child = $(randomElm2).children();
-    randomScrollAnime();
+//     var randomElm2 = $(".randomScroll");
+//     var randomElm2Child = $(randomElm2).children();
+//     randomScrollAnime();
 
-    function randomScrollAnime() {
-        var elemPos = $(".randomScroll").offset().top - 50;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight) {
-            if (randomElm2Child.length > 0) {
-                var rnd = Math.floor(Math.random() * randomElm2Child.length);
-                var moveData = "flipDown";
-                if (animeFlag) {
-                    animeFlag = false;
-                    $(randomElm2Child[rnd]).addClass(moveData);
-                    setTimeout(function () {
-                        animeFlag = true;
-                        randomScrollAnime();
-                    }, 200);
-                    randomElm2Child.splice(rnd, 1);
-                }
-            }
+//     function randomScrollAnime() {
+//         var elemPos = $(".randomScroll").offset().top - 50;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//         if (scroll >= elemPos - windowHeight) {
+//             if (randomElm2Child.length > 0) {
+//                 var rnd = Math.floor(Math.random() * randomElm2Child.length);
+//                 var moveData = "flipDown";
+//                 if (animeFlag) {
+//                     animeFlag = false;
+//                     $(randomElm2Child[rnd]).addClass(moveData);
+//                     setTimeout(function () {
+//                         animeFlag = true;
+//                         randomScrollAnime();
+//                     }, 200);
+//                     randomElm2Child.splice(rnd, 1);
+//                 }
+//             }
 
-        } else {
-            animeFlag = true;
-        }
+//         } else {
+//             animeFlag = true;
+//         }
 
-    }
-}
+//     }
+// }
 
 var animeFlag = true;
 
 
-function fadeAnime() {
+// function fadeAnime() {
 
-    $('.fadeUpTrigger').each(function () {
-        var elemPos = $(this).offset().top - 50;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight) {
-            $(this).addClass('fadeUp');
-        } else {
-            $(this).removeClass('fadeUp');
-        }
-    });
-    $('.fadeLeftTrigger').each(function () {
-        var elemPos = $(this).offset().top - 50;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight) {
-            $(this).addClass('fadeLeft');
-        } else {
-            $(this).removeClass('fadeLeft');
-        }
-    });
+//     $('.fadeUpTrigger').each(function () {
+//         var elemPos = $(this).offset().top - 50;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//         if (scroll >= elemPos - windowHeight) {
+//             $(this).addClass('fadeUp');
+//         } else {
+//             $(this).removeClass('fadeUp');
+//         }
+//     });
+//     $('.fadeLeftTrigger').each(function () {
+//         var elemPos = $(this).offset().top - 50;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//         if (scroll >= elemPos - windowHeight) {
+//             $(this).addClass('fadeLeft');
+//         } else {
+//             $(this).removeClass('fadeLeft');
+//         }
+//     });
 
-    $('.fadeRightTrigger').each(function () {
-        var elemPos = $(this).offset().top - 50;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll >= elemPos - windowHeight) {
-            $(this).addClass('fadeRight');
-        } else {
-            $(this).removeClass('fadeRight');
-        }
-    });
-}
+//     $('.fadeRightTrigger').each(function () {
+//         var elemPos = $(this).offset().top - 50;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//         if (scroll >= elemPos - windowHeight) {
+//             $(this).addClass('fadeRight');
+//         } else {
+//             $(this).removeClass('fadeRight');
+//         }
+//     });
+// }
 
-$(window).scroll(function () {
-    ScrollTimelineAnime();
-    ScrollAnime();
-    moveAnimation();
-    fadeAnime();
-});
+// $(window).scroll(function () {
+//     ScrollTimelineAnime();
+//     ScrollAnime();
+//     moveAnimation();
+//     fadeAnime();
+// });
 
 $(window).on('load', function () {
     $("#splash-logo").delay(1200).fadeOut('slow');
