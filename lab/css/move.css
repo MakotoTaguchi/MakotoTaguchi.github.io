@@ -30,6 +30,79 @@
     height: 2px;
 }
 
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2 {
+    display: none;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2 {
+    display: block;
+}
+
+/*上に消えるエリア*/
+body.appear .splashbg1 {
+    animation-name: PageAnime;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    bottom: 50%;
+    left: 0;
+    transform: scaleY(1);
+    background-color: #182578;
+    /*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime {
+    0% {
+        transform-origin: top;
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform-origin: top;
+        transform: scaleY(0);
+    }
+}
+
+/*下に消えるエリア*/
+body.appear .splashbg2 {
+    animation-name: PageAnime2;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    content: "";
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 50%;
+    left: 0;
+    transform: scaleY(1);
+    background-color: #182578;
+    /*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2 {
+    0% {
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform-origin: bottom;
+        transform: scaleY(0);
+    }
+}
+
+
 /* ヘッダー */
 #header {
     /*fixedで上部固定*/
