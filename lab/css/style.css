@@ -369,6 +369,11 @@ img {
 
 /* research */
 
+#research {
+    width: 90%;
+    margin: 0 auto;
+}
+
 #research h2 {
     text-align: center;
     margin: 0 0 100px 0;
@@ -607,5 +612,228 @@ img {
     .faq-bg,
     .faq-bg::after {
         height: 36vh;
+    }
+}
+
+/* footer */
+
+#footer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+}
+
+#footer .footer-r {
+    width: 70%;
+    padding: 40px;
+    background: #1bb7c3;
+}
+
+#footer .footer-r .map-address {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .footer-r .map-address address {
+    font-style: normal;
+    margin: 0 0 30px 0;
+}
+
+#footer .footer-r .map-area {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 0 100px 0;
+}
+
+#footer .footer-r .map-area h2 {
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 1.3rem;
+    width: 10%;
+    height: 10em;
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+
+#footer .footer-r .map-address {
+    width: 30%;
+}
+
+#footer .footer-r .map-block {
+    width: 50%;
+}
+
+#footer .footer-r .iframe-area {
+    position: relative;
+    padding-bottom: 51.65%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+#footer .footer-r .iframe-area iframe,
+#footer .footer-r .iframe-area object,
+#footer .footer-r .iframe-area embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#footer .footer-link {
+    font-size: 0.9rem;
+    padding: 0 0 0 50px;
+}
+
+#footer .footer-link li {
+    display: inline-block;
+}
+
+#footer .footer-link a {
+    color: #fff;
+}
+
+#footer .footer-link a::after {
+    content: '/';
+    padding: 0 10px;
+}
+
+#footer .footer-link li:last-child a::after {
+    content: '';
+    padding: 0;
+}
+
+#footer .footer-l {
+    width: 30%;
+    background: #333333;
+}
+
+#footer .footer-l .footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #cccccc;
+    height: 40vh;
+}
+
+#footer .footer-l .footer-contact-area h2 {
+    font-size: 1.8rem;
+    margin: 0 0 20px 0;
+    letter-spacing: 0.1em;
+}
+
+#footer .footer-l .footer-contact-area a {
+    font-size: 1.5rem;
+    padding: 0 0 20px 0;
+    display: inline-block;
+}
+
+#footer #copyright {
+    background: #333333;
+    color: #ccc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+#footer #page-top {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#footer #page-top span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid #182578;
+    border-left: 2px solid #182578;
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width:1045px) {
+
+    #footer .footer-r,
+    #footer .footer-l {
+        width: 100%;
+    }
+
+    #footer .footer-l .footer-contact,
+    #footer #copyright {
+        height: inherit;
+        padding: 40px 0;
+    }
+
+    #footer .footer-r .map-area h2 {
+        width: 5%;
+    }
+
+    #footer .footer-link {
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    #footer .footer-r {
+        padding: 80px 30px;
+    }
+
+    #footer .footer-r .map-area {
+        margin: 0;
+    }
+
+    #footer .footer-link {
+        display: none;
+    }
+
+    #footer .footer-r .map-area h2 {
+        width: 100%;
+        height: inherit;
+        margin: 0 0 50px 0;
+        -ms-writing-mode: lr-tb;
+        -webkit-writing-mode: horizontal-tb;
+        writing-mode: horizontal-tb;
+        font-size: 2.4rem;
+    }
+
+    #footer .footer-r .map-address {
+        width: 48%;
+    }
+
+    #footer #page-top {
+        width: 60px;
+        height: 60px;
+    }
+
+}
+
+@media screen and (max-width:560px) {
+
+    #footer .footer-r .map-address,
+    #footer .footer-r .map-block {
+        width: 100%;
+    }
+
+    #footer .footer-r .map-address {
+        margin: 0 0 50px 0;
     }
 }
