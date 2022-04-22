@@ -1,0 +1,477 @@
+@charset "utf-8";
+/* アニメーションなどのためのCSS */
+
+/* ヘッダー */
+#header {
+    /*fixedで上部固定*/
+    position: fixed;
+    width: 100%;
+    height: 94px;
+    z-index: 99;
+    /*以下はレイアウトのためのCSS*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header ul li span {
+    color: #fff;
+}
+
+#header .current span {
+    color: #333;
+}
+
+@media screen and (max-width:768px) {
+    #header {
+        height: 70px;
+    }
+
+}
+
+/*　上に上がる動き　*/
+
+#header.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#header.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ナビゲーション */
+@media screen and (max-width:1300px) {
+
+    /*アクティブになったエリア*/
+    #g-nav.panelactive {
+        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to top right, rgba(74, 198, 186, 1), rgba(14, 141, 152, 1));
+    }
+
+    /*丸の拡大*/
+    .circle-bg {
+        position: fixed;
+        z-index: 3;
+        /*丸の形*/
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: linear-gradient(to top right, rgba(74, 198, 186, 1), rgba(14, 141, 152, 1));
+        ;
+        /*丸のスタート位置と形状*/
+        transform: scale(0);
+        /*scaleをはじめは0に*/
+        right: -50px;
+        bottom: -50px;
+        transition: all .6s;
+        /*0.6秒かけてアニメーション*/
+    }
+
+    .circle-bg.circleactive {
+        transform: scale(50);
+        /*クラスが付与されたらscaleを拡大*/
+    }
+
+    /*ナビゲーションの縦スクロール*/
+    #g-nav-list {
+        display: none;
+        /*はじめは表示なし*/
+        /*ナビの数が増えた場合縦スクロール*/
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #g-nav.panelactive #g-nav-list {
+        display: block;
+        /*クラスが付与されたら出現*/
+    }
+
+    /*ナビゲーション*/
+    #g-nav ul {
+        opacity: 0;
+        /*はじめは透過0*/
+        /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+        position: absolute;
+        z-index: 999;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /*背景が出現後にナビゲーションを表示*/
+    #g-nav.panelactive ul {
+        opacity: 1;
+    }
+
+    /* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+    #g-nav.panelactive ul li {
+        animation-name: gnaviAnime;
+        animation-duration: 1s;
+        animation-delay: .2s;
+        /*0.2 秒遅らせて出現*/
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+
+    /*リストのレイアウト設定*/
+    #g-nav li {
+        text-align: center;
+        list-style: none;
+        margin: 0 0 10px 0;
+    }
+
+    #g-nav li a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+    }
+
+
+}
+
+@keyframes gnaviAnime {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* ボタン */
+.openbtn {
+    display: none;
+}
+
+
+@media screen and (max-width:1300px) {
+
+    .openbtn {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        /* ボタンを最前面に */
+        cursor: pointer;
+        width: 94px;
+        height: 94px;
+    }
+
+    /* ×に変化 */
+    .openbtn span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 23px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #666;
+        width: 45%;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 33px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 46px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 58px;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 41px;
+        left: 28px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 52px;
+        left: 28px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .openbtn {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* ×に変化 */
+    .openbtn span {
+        left: 17px;
+    }
+
+    .openbtn span:nth-of-type(1) {
+        top: 20px;
+    }
+
+    .openbtn span:nth-of-type(2) {
+        top: 33px;
+    }
+
+    .openbtn span:nth-of-type(3) {
+        top: 45px;
+    }
+
+    .openbtn.active span:nth-of-type(1) {
+        top: 28px;
+        left: 22px;
+    }
+
+    .openbtn.active span:nth-of-type(3) {
+        top: 40px;
+        left: 22px;
+    }
+}
+
+/* ボタン押した時の処理 */
+/*== ボタン共通設定 */
+.btn {
+    /*アニメーションの起点とするためrelativeを指定*/
+    position: relative;
+    overflow: hidden;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #333;
+    /* ボーダーの色と太さ */
+    padding: 40px 8px;
+    text-align: center;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: ease .2s;
+}
+
+.btn.bgcenterout {
+    border: 1px solid #fff;
+    /* ボーダーの色と太さ */
+    padding: 8px 40px;
+}
+
+/*ボタン内spanの形状*/
+.btn span {
+    position: relative;
+    z-index: 3;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    color: #333;
+}
+
+.btn:hover span {
+    color: #fff;
+}
+
+.btn.bgcenterout span {
+    color: #fff;
+}
+
+.btn.bgcenterout:hover span {
+    color: #333;
+}
+
+/*== 中央から横全体 */
+.bgcenterx:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /*色や形状*/
+    background: #333;
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: top;
+}
+
+/*hoverした際の形状*/
+.bgcenterx:hover:before {
+    transform: scale(1, 1);
+}
+
+
+/*== 中央から外 */
+.bgcenterout:before {
+    content: '';
+    /*絶対配置で位置を指定*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    /*色や形状*/
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .3s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 0);
+    transform-origin: center;
+}
+
+/*hoverした際の形状*/
+.bgcenterout:hover:before {
+    transform: scale(1, 1);
+}
+
+
+/* nav */
+.nav05b li {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+    margin: 0 5px;
+}
+
+/*線の基点位置*/
+.nav05b li::before,
+.nav05b li::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width: 0;
+    height: 2px;
+    background: #182578;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+    transition-delay: 0.2s;
+}
+
+@media screen and (max-width:1300px) {
+
+    /*線の基点位置*/
+    .nav05b li::before,
+    .nav05b li::after {
+        background: #333;
+    }
+}
+
+.nav05b li::before {
+    right: 0;
+    top: 0;
+}
+
+.nav05b li::after {
+    left: 0;
+    bottom: 0;
+}
+
+/*線の基点位置2 spanタグ*/
+
+.nav05b li span {
+    display: block;
+}
+
+.nav05b li span::before,
+.nav05b li span::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    /*線の形状*/
+    width: 1px;
+    height: 0;
+    /*アニメーションの指定*/
+    transition: all 0.2s linear;
+}
+
+.nav05b li span::before {
+    left: 0;
+    top: 0;
+}
+
+.nav05b li span::after {
+    right: 0;
+    bottom: 0;
+}
+
+/*現在地とhoverした際の線の変化*/
+
+.nav05b li.current::before,
+.nav05b li.current::after,
+.nav05b li:hover::before,
+.nav05b li:hover::after {
+    width: 100%;
+    /*横幅を100%に*/
+}
+
+.nav05b li.current span::before,
+.nav05b li.current span::after,
+.nav05b li:hover span::before,
+.nav05b li:hover span::after {
+    height: 100%;
+    /*縦幅を100%に*/
+}
+
+.service-area {
+    transform: translate3d(0, 0, 0);
+}
+
+#particles-js {
+    position: fixed;
+    /*描画固定*/
+    z-index: -1;
+    /*描画を一番下に*/
+    width: 100%;
+    height: 100%;
+}
+
+#wrapper {
+    position: relative;
+    /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+    z-index: 1;
+    /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+}
