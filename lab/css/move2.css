@@ -31,9 +31,9 @@
 
 /*　上に上がる動き　*/
 
-#header.UpMove {
+/* #header.UpMove {
     animation: UpAnime 0.5s forwards;
-}
+} */
 
 @keyframes UpAnime {
     from {
@@ -475,3 +475,60 @@
     z-index: 1;
     /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
 }
+
+/* 4-1 ふわっ（下から） */
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 4-2　パタッ（左へ） */
+.flipLeft {
+    animation-name: flipLeftAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    perspective-origin: left center;
+    opacity: 0;
+}
+
+@keyframes flipLeftAnime {
+    from {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* スマホ表示用。flipLeftTriggerを指定している親要素に指定しないとうまく動かない*/
+#vision,
+.service-area {
+    transform: translate3d(0, 0, 0);
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+/* .bgLRextendTrigger,
+.bgappearTrigger,
+.fadeUpTrigger,
+.flipLeftTrigger {
+    opacity: 0;
+} */
