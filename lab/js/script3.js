@@ -275,14 +275,20 @@ function fadeAnime() {
 
 }
 
-// 逕ｻ髱｢繧偵Μ繧ｵ繧､繧ｺ縺励◆繧牙虚縺九＠縺溘＞蝣ｴ蜷医�險倩ｿｰ
-$(window).on('resize', function () {
-    sliderSet(); //讖溯�邱ｨ 9-4-1 繝九Η繝ｼ繧ｹ繝�ぅ繝�き繝ｼ縺ｮ蜍輔″縺ｮ髢｢謨ｰ繧貞他縺ｶ
-});
-
 // 逕ｻ髱｢繧偵せ繧ｯ繝ｭ繝ｼ繝ｫ繧偵＠縺溘ｉ蜍輔°縺励◆縺��ｴ蜷医�險倩ｿｰ
 $(window).scroll(function () {
     PositionCheck();
-    ScrollAnime(); 
-    fadeAnime(); 
+    ScrollAnime();
+    fadeAnime();
+});
+
+//画像をクリックしたら現れる画面の設定	
+$(".gallery-list").modaal({
+    fullscreen: 'true', //フルスクリーンモードにする
+    before_open: function () { // モーダルが開く前に行う動作
+        $('html').css('overflow-y', 'hidden'); /*縦スクロールバーを出さない*/
+    },
+    after_close: function () { // モーダルが閉じた後に行う動作
+        $('html').css('overflow-y', 'scroll'); /*縦スクロールバーを出す*/
+    }
 });
