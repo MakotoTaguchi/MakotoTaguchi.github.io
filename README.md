@@ -7,4 +7,4 @@
 3. デジハリの課題で、渡されたデザインカンプを元に作成したページ --> https://makototaguchi.github.io/WebDesign/corporate_site2/service2.html <br>
 4. デジハリの課題として作った自分のプロフィールページ --> https://makototaguchi.github.io/WebDesign/photo_site/ <br>
 5. 制作中 --> https://makototaguchi.github.io/WebDesign/restaurant_site/ 
-6. 研究室 --> http://www.nao.net.it-chiba.ac.jp/
+6. 研究室のWebサイトを作成しました --> http://www.nao.net.it-chiba.ac.jp/
