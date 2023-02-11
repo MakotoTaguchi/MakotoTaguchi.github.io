@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let Q = [
+        //クイズ
+        "Q.唾液の成分と働きの組み合わせで正しいのはどれか。一つ選べ。",
+        ' onclick="Q_(1);" >唾液アミラーゼ --------- 消化作用',
+        ' onclick="Q_(2);" >ムチン --------- 抗菌作用',
+        ' onclick="Q_(2);" >リゾチーム --------- 細胞膜分解作用',
+        ' onclick="Q_(2);" >スタテリン --------- 潤滑作用',
+        "ムチンは潤滑作用と歯質保護作用、リゾチームは抗菌作用、スタテリンは再石灰化作用。",
+
+        "Q.唾液の成分の中で、抗菌作用では無いものはどれか。一つ選べ。",
+        ' onclick="Q_(2);" >分泌型IgA',
+        ' onclick="Q_(2);" >リゾチーム',
+        ' onclick="Q_(1);" >ムチン',
+        ' onclick="Q_(2);" >ラクトフェリン',
+        "ムチンは潤滑作用と歯質保護作用。",
+      ];
+
+      let r_1 = Q.length / 6; //クイズを出すための変数
+      let r_2 = Math.floor(Math.random() * r_1);
+      let R = r_2 * 6; //クイズを出すための変数
+
+      //次の問題を表示するためのプログラムです
+      function Q_(oxq) {
+        if (oxq === 0) {
+          r_1 = Q.length / 6;
+          r_2 = Math.floor(Math.random() * r_1);
+          R = r_2 * 6;
+
+          document.getElementById("ox").innerHTML = "";
+          document.getElementById("quiz").innerHTML = "";
+
+          quiz = document.getElementById("quiz");
+          quiz.insertAdjacentHTML("afterbegin", "<p>" + Q[R] + "</p>");
+          quiz.insertAdjacentHTML(
+            "beforeend",
+            "<button" + Q[R + 1] + "</button><br/>"
+          );
+          quiz.insertAdjacentHTML(
+            "beforeend",
+            "<button" + Q[R + 2] + "</button><br/>"
+          );
+          quiz.insertAdjacentHTML(
+            "beforeend",
+            "<button" + Q[R + 3] + "</button><br/>"
+          );
+          quiz.insertAdjacentHTML(
+            "beforeend",
+            "<button" + Q[R + 4] + "</button><br/>"
+          );
+        } else if (oxq === 1) {
+          //正解時の実行プログラムです
+          document.getElementById("ox").innerHTML = "<p>正解！</p>";
+          document.getElementById("quiz").innerHTML = "<p>" + Q[R + 5] + "</p>";
+          document.getElementById("next").innerHTML =
+            '<p><button onClick="Q_(0);">次の問題へ</button></p>';
+        } else if (oxq === 2) {
+          //失敗時の実行プログラムです
+          document.getElementById("ox").innerHTML = "<p>不正解！</p>";
+          document.getElementById("quiz").innerHTML = "<p>" + Q[R + 5] + "</p>";
+          document.getElementById("next").innerHTML =
+            '<p><button onClick="Q_(0);">次の問題へ</button></p>';
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write('<p id="ox"></p>');
+
+      document.write('<p id="quiz">');
+      document.write(Q[R + 0] + "<br/>");
+      document.write("<button" + Q[R + 1] + "</button><br/>");
+      document.write("<button" + Q[R + 2] + "</button><br/>");
+      document.write("<button" + Q[R + 3] + "</button><br/>");
+      document.write("<button" + Q[R + 4] + "</button><br/>");
+      document.write("</p>");
+
+      document.write(
+        '<p id="next"><button onClick="Q_(0);">次の問題へ</button></p>'
+      );
+    </script>
+  </body>
+</html>
