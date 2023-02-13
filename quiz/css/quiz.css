@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  font-size: 62.5%;
+  font-family: "Kokoro";
+}
+
+.title {
+  padding-top: 30px;
+}
+
+.title-name {
+  font-size: 2rem;
+}
+
+main {
+  padding-top: 25px;
+}
+
+.button {
+  font-size: 1.6rem;
+  border-radius: 30px;
+  border: 1px solid #000;
+  width: 35%;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 20px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: gold;
+}
