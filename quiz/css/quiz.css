@@ -16,18 +16,45 @@ main {
   padding-top: 25px;
 }
 
-.button {
-  font-size: 1.6rem;
-  border-radius: 30px;
-  border: 1px solid #000;
-  width: 35%;
-  display: block;
-  margin: 0 auto;
-  padding: 5px 20px;
-  background-color: #fff;
-  cursor: pointer;
+main h2 {
+  font-size: 1.3rem;
 }
 
-.button:hover {
-  background-color: gold;
+.question {
+  margin-bottom: 8px;
+}
+
+.selection {
+  margin-top: 30px;
+}
+
+#text_q {
+  font-size: 1.2rem;
+  display: block;
+}
+
+#text_s {
+  font-size: 1.2rem;
+}
+
+#text_s div {
+  margin-bottom: -20px;
+}
+
+.answer {
+  margin-top: 50px;
+}
+
+#text_a {
+  font-size: 1.2rem;
+}
+
+#text_q table {
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
 }
